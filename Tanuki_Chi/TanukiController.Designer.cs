@@ -37,15 +37,15 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(500, 500);
-            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TanukiController";
-            this.ShowInTaskbar = false;
+            this.Opacity = 0D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "TanukiControler";
             this.TransparencyKey = System.Drawing.SystemColors.Control;
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.Tanuki_Load);
             this.ResumeLayout(false);
 

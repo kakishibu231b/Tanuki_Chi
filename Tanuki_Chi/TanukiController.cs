@@ -23,12 +23,27 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
+        public List<TanukiView> tanukiViews = new List<TanukiView>();
+
+        /// <summary>
+        /// 
+        /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void Tanuki_Load(object sender, EventArgs e)
         {
-            TanukiView tanukiView = new TanukiView(new HayakawaTazuna());
-            tanukiView.Show(this);
+            tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
+            tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
+            tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
+            tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
+            tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
+            tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
+            tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
+            tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
+            foreach (var view in tanukiViews)
+            {
+                view.Show(this);
+            }
         }
     }
 }

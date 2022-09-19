@@ -17,16 +17,25 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public TanukiView()
+        private TanukiView()
         {
             InitializeComponent();
         }
 
-        public TanukiView(TanukiModel model)
+        /// <summary>
+        /// 
+        /// </summary>
+        public TanukiView(TanukiModel model, Form owner)
         {
             InitializeComponent();
             this.model = model;
+            this.Owner = owner;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Rectangle tanukiRectangle;
 
         /// <summary>
         /// 
@@ -41,7 +50,46 @@ namespace Tanuki_Chi
                 BackgroundImage.Dispose();
             }
             BackgroundImage = image;
-            ImageAnimator.Animate(BackgroundImage, new EventHandler(Image_FrameChanged));
+
+            tanukiRectangle = TanukiCommon.getImageBorder(image);
+
+            Location = getInitLocation(tanukiRectangle);
+
+            ImageAnimator.Animate(BackgroundImage, new EventHandler(TanukiView_ImageFrameChanged));
+        }
+
+        /// <summary>
+        /// 初期位置取得
+        /// </summary>
+        /// <param name="image"></param>
+        /// <returns></returns>
+        public Point getInitLocation(Rectangle rectangle)
+        {
+            int screen_width = Screen.PrimaryScreen.WorkingArea.Width;
+            int screen_height = Screen.PrimaryScreen.WorkingArea.Height;
+            Point point = new Point(screen_width - rectangle.Right, screen_height - rectangle.Bottom);
+
+            TanukiController tanukiController = Owner as TanukiController;
+            foreach (TanukiView view in tanukiController.tanukiViews)
+            {
+                if (view == this)
+                {
+                    break;
+                }
+
+                if (view.BackgroundImage == null)
+                {
+                    continue;
+                }
+
+                Rectangle viewRectangle = view.tanukiRectangle;
+                if (viewRectangle == null)
+                {
+                    continue;
+                }
+                point.X -= viewRectangle.Width;
+            }
+            return point;
         }
 
         /// <summary>
@@ -49,7 +97,7 @@ namespace Tanuki_Chi
         /// </summary>
         /// <param name="o"></param>
         /// <param name="e"></param>
-        private void Image_FrameChanged(object o, EventArgs e)
+        private void TanukiView_ImageFrameChanged(object o, EventArgs e)
         {
             Invalidate();
         }
