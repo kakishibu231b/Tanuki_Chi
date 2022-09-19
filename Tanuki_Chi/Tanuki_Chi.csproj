@@ -66,7 +66,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ElCondorPasa.cs" />
+    <Compile Include="GrassWonder.cs" />
     <Compile Include="HayakawaTazuna.cs" />
+    <Compile Include="InesFujin.cs" />
+    <Compile Include="KingHalo.cs" />
+    <Compile Include="Maruzensky.cs" />
+    <Compile Include="MihonoBourbon.cs" />
+    <Compile Include="OjuChosan.cs" />
+    <Compile Include="SeiunSky.cs" />
+    <Compile Include="SilenceSuzuka.cs" />
+    <Compile Include="SmartFalcon.cs" />
+    <Compile Include="SpecialWeek.cs" />
     <Compile Include="TanukiCommon.cs" />
     <Compile Include="TanukiModel.cs" />
     <Compile Include="TanukiController.cs">
@@ -83,6 +94,7 @@
     <Compile Include="TanukiView.Designer.cs">
       <DependentUpon>TanukiView.cs</DependentUpon>
     </Compile>
+    <Compile Include="TsurumaruTsuyoshi.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -113,7 +125,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\%28幻覚%29オジュウチョウサン\オジュウチョウサン腰ふり.gif" />
     <Content Include="Resources\%28関係者%29駿川たづな\関係者_駿川たづな直立にっこり.gif" />
+    <Content Include="Resources\アイネスフウジン\アイネスフウジン歌唱.gif" />
+    <Content Include="Resources\エルコンドルパサー\エルコンドルパサーにっこり.gif" />
+    <Content Include="Resources\キングヘイロー\キングヘイローはりきり.gif" />
+    <Content Include="Resources\グラスワンダー\グラスワンダーにっこり.gif" />
+    <Content Include="Resources\ゴールドシップ\ゴルシ直立ななめおだやか.gif" />
+    <Content Include="Resources\サイレンススズカ\サイレンススズカ歌唱.gif" />
+    <Content Include="Resources\シリウスシンボリ\シリウスシンボリ立ちにっこり.gif" />
+    <Content Include="Resources\シンボリルドルフ\ションボリ立ち正面ｖ.gif" />
+    <Content Include="Resources\スペシャルウィーク\スペシャルウィークにっこり.gif" />
+    <Content Include="Resources\スマートファルコン\スマートファルコンコンサート.gif" />
+    <Content Include="Resources\セイウンスカイ\セイウンスカイにっこり.gif" />
+    <Content Include="Resources\ツインターボ\ターボはりきり.gif" />
+    <Content Include="Resources\ツルマルツヨシ\ツルマルツヨシにっこり.gif" />
+    <Content Include="Resources\トウカイテイオー\テイオーにっこり.gif" />
+    <Content Include="Resources\ハツラツ\オグリキャップ幼少期立ちｖ.gif" />
+    <Content Include="Resources\マルゼンスキー\マルゼンスキー今風1歌唱.gif" />
+    <Content Include="Resources\ミホノブルボン\ミホノブルボン歌唱.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -32,14 +32,21 @@ namespace Tanuki_Chi
         /// <param name="e"></param>
         private void Tanuki_Load(object sender, EventArgs e)
         {
-            tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
-            tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
-            tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
-            tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
-            tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
-            tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
-            tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
-            tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
+            //tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
+            //tanukiViews.Add(new TanukiView(new OjuChosan(), this));
+
+            //tanukiViews.Add(new TanukiView(new ElCondorPasa(), this));
+            //tanukiViews.Add(new TanukiView(new GrassWonder(), this));
+            //tanukiViews.Add(new TanukiView(new KingHalo(), this));
+            //tanukiViews.Add(new TanukiView(new SeiunSky(), this));
+            //tanukiViews.Add(new TanukiView(new SpecialWeek(), this));
+            //tanukiViews.Add(new TanukiView(new TsurumaruTsuyoshi(), this));
+
+            //tanukiViews.Add(new TanukiView(new InesFujin(), this));
+            //tanukiViews.Add(new TanukiView(new MihonoBourbon(), this));
+            //tanukiViews.Add(new TanukiView(new SilenceSuzuka(), this));
+            //tanukiViews.Add(new TanukiView(new SmartFalcon(), this));
+            //tanukiViews.Add(new TanukiView(new Maruzensky(), this));
             foreach (var view in tanukiViews)
             {
                 view.Show(this);

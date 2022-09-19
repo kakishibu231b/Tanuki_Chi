@@ -118,6 +118,60 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="アイネスフウジン歌唱" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\アイネスフウジン\アイネスフウジン歌唱.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="エルコンドルパサーにっこり" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\エルコンドルパサー\エルコンドルパサーにっこり.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="オグリキャップ幼少期立ちｖ" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ハツラツ\オグリキャップ幼少期立ちｖ.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="オジュウチョウサン腰ふり" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\(幻覚)オジュウチョウサン\オジュウチョウサン腰ふり.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="キングヘイローはりきり" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\キングヘイロー\キングヘイローはりきり.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="グラスワンダーにっこり" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\グラスワンダー\グラスワンダーにっこり.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ゴルシ直立ななめおだやか" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ゴールドシップ\ゴルシ直立ななめおだやか.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="サイレンススズカ歌唱" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\サイレンススズカ\サイレンススズカ歌唱.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ションボリ立ち正面ｖ" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\シンボリルドルフ\ションボリ立ち正面ｖ.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="シリウスシンボリ立ちにっこり" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\シリウスシンボリ\シリウスシンボリ立ちにっこり.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="スペシャルウィークにっこり" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\スペシャルウィーク\スペシャルウィークにっこり.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="スマートファルコンコンサート" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\スマートファルコン\スマートファルコンコンサート.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="セイウンスカイにっこり" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\セイウンスカイ\セイウンスカイにっこり.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ターボはりきり" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ツインターボ\ターボはりきり.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ツルマルツヨシにっこり" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ツルマルツヨシ\ツルマルツヨシにっこり.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="テイオーにっこり" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\トウカイテイオー\テイオーにっこり.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="マルゼンスキー今風1歌唱" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\マルゼンスキー\マルゼンスキー今風1歌唱.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ミホノブルボン歌唱" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ミホノブルボン\ミホノブルボン歌唱.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="関係者_駿川たづな直立にっこり" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\(関係者)駿川たづな\関係者_駿川たづな直立にっこり.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
