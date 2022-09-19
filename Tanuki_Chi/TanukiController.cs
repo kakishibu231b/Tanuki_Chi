@@ -47,6 +47,13 @@ namespace Tanuki_Chi
             //tanukiViews.Add(new TanukiView(new SilenceSuzuka(), this));
             //tanukiViews.Add(new TanukiView(new SmartFalcon(), this));
             //tanukiViews.Add(new TanukiView(new Maruzensky(), this));
+
+            //tanukiViews.Add(new TanukiView(new SymboliRudolf(), this));
+            //tanukiViews.Add(new TanukiView(new SiriusSymboli(), this));
+            //tanukiViews.Add(new TanukiView(new GoldShip(), this));
+            //tanukiViews.Add(new TanukiView(new Hatsuratsu(), this));
+            //tanukiViews.Add(new TanukiView(new TokaiTeio(), this));
+            //tanukiViews.Add(new TanukiView(new TwinTurbo(), this));
             foreach (var view in tanukiViews)
             {
                 view.Show(this);

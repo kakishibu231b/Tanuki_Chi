@@ -163,8 +163,8 @@
   <data name="ツルマルツヨシにっこり" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\ツルマルツヨシ\ツルマルツヨシにっこり.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="テイオーにっこり" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\トウカイテイオー\テイオーにっこり.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="テイオー棒立ちにっこり" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\トウカイテイオー\テイオー棒立ちにっこり.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="マルゼンスキー今風1歌唱" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\マルゼンスキー\マルゼンスキー今風1歌唱.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

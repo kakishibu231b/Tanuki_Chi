@@ -213,9 +213,9 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap テイオーにっこり {
+        internal static System.Drawing.Bitmap テイオー棒立ちにっこり {
             get {
-                object obj = ResourceManager.GetObject("テイオーにっこり", resourceCulture);
+                object obj = ResourceManager.GetObject("テイオー棒立ちにっこり", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

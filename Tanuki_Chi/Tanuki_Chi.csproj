@@ -67,7 +67,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ElCondorPasa.cs" />
+    <Compile Include="GoldShip.cs" />
     <Compile Include="GrassWonder.cs" />
+    <Compile Include="Hatsuratsu.cs" />
     <Compile Include="HayakawaTazuna.cs" />
     <Compile Include="InesFujin.cs" />
     <Compile Include="KingHalo.cs" />
@@ -76,8 +78,10 @@
     <Compile Include="OjuChosan.cs" />
     <Compile Include="SeiunSky.cs" />
     <Compile Include="SilenceSuzuka.cs" />
+    <Compile Include="SiriusSymboli.cs" />
     <Compile Include="SmartFalcon.cs" />
     <Compile Include="SpecialWeek.cs" />
+    <Compile Include="SymboliRudolf.cs" />
     <Compile Include="TanukiCommon.cs" />
     <Compile Include="TanukiModel.cs" />
     <Compile Include="TanukiController.cs">
@@ -94,7 +98,9 @@
     <Compile Include="TanukiView.Designer.cs">
       <DependentUpon>TanukiView.cs</DependentUpon>
     </Compile>
+    <Compile Include="TokaiTeio.cs" />
     <Compile Include="TsurumaruTsuyoshi.cs" />
+    <Compile Include="TwinTurbo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -140,7 +146,7 @@
     <Content Include="Resources\セイウンスカイ\セイウンスカイにっこり.gif" />
     <Content Include="Resources\ツインターボ\ターボはりきり.gif" />
     <Content Include="Resources\ツルマルツヨシ\ツルマルツヨシにっこり.gif" />
-    <Content Include="Resources\トウカイテイオー\テイオーにっこり.gif" />
+    <Content Include="Resources\トウカイテイオー\テイオー棒立ちにっこり.gif" />
     <Content Include="Resources\ハツラツ\オグリキャップ幼少期立ちｖ.gif" />
     <Content Include="Resources\マルゼンスキー\マルゼンスキー今風1歌唱.gif" />
     <Content Include="Resources\ミホノブルボン\ミホノブルボン歌唱.gif" />
