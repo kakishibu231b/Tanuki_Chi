@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public HayakawaTazuna() : base("駿川たづな", Properties.Resources.関係者_駿川たづな直立にっこり)
+        public HayakawaTazuna() : base("駿川たづな", Properties.Resources.HayakawaTazuna_Front_Smile)
         {
             
         }
@@ -23,9 +23,9 @@ namespace Tanuki_Chi
 
             if(command == "MouseDown")
             {
-                if(CurrentImage != Properties.Resources.関係者_駿川たづな直立笑顔)
+                if(CurrentImage != Properties.Resources.HayakawaTazuna_Front_Smiling)
                 {
-                    image = Properties.Resources.関係者_駿川たづな直立笑顔;
+                    image = Properties.Resources.HayakawaTazuna_Front_Smiling;
                 }
             }
 

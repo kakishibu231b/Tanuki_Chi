@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public TokaiTeio() : base("トウカイテイオー", Properties.Resources.テイオー棒立ちにっこり)
+        public TokaiTeio() : base("トウカイテイオー", Properties.Resources.TokaiTeio_Front_Smiling)
         {
 
         }

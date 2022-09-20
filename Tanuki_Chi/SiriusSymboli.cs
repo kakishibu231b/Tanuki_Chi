@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public SiriusSymboli() : base("シリウスシンボリ", Properties.Resources.シリウスシンボリ立ちにっこり)
+        public SiriusSymboli() : base("シリウスシンボリ", Properties.Resources.SiriusSymboli_Front_Smiling)
         {
 
         }

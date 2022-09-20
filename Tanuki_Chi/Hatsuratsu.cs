@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public Hatsuratsu() : base("ハツラツ", Properties.Resources.オグリキャップ幼少期立ちｖ)
+        public Hatsuratsu() : base("ハツラツ", Properties.Resources.Hatsuratsu_Front_Smiling)
         {
 
         }

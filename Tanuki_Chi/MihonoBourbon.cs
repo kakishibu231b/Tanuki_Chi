@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public MihonoBourbon() : base("ミホノブルボン", Properties.Resources.ミホノブルボン歌唱)
+        public MihonoBourbon() : base("ミホノブルボン", Properties.Resources.MihonoBourbon_Dance_Sing)
         {
 
         }

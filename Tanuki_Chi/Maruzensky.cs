@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public Maruzensky() : base("マルゼンスキー", Properties.Resources.マルゼンスキー今風1歌唱)
+        public Maruzensky() : base("マルゼンスキー", Properties.Resources.MaruzenskyMS_Dance_Sing)
         {
 
         }

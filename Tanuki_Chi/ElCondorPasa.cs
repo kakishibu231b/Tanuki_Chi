@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public ElCondorPasa() : base("エルコンドルパサー", Properties.Resources.エルコンドルパサーにっこり)
+        public ElCondorPasa() : base("エルコンドルパサー", Properties.Resources.ElCondorPasa_Dance_Smiling)
         {
 
         }

@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public TwinTurbo() : base("ツインターボ", Properties.Resources.ターボはりきり)
+        public TwinTurbo() : base("ツインターボ", Properties.Resources.TwinTurbo_Dance_HighSpirits)
         {
 
         }

@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public SmartFalcon() : base("スマートファルコン", Properties.Resources.スマートファルコンコンサート)
+        public SmartFalcon() : base("スマートファルコン", Properties.Resources.SmartFalcon_Dance_Sing)
         {
 
         }

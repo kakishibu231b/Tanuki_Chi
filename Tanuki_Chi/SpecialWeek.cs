@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public SpecialWeek() : base("スペシャルウィーク", Properties.Resources.スペシャルウィークにっこり)
+        public SpecialWeek() : base("スペシャルウィーク", Properties.Resources.SpecialWeek_Dance_Smiling)
         {
 
         }

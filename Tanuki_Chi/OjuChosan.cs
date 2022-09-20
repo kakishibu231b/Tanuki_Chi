@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public OjuChosan() : base("オジュウチョウサン", Properties.Resources.オジュウチョウサン腰ふり)
+        public OjuChosan() : base("オジュウチョウサン", Properties.Resources.OjuChosan_Front_WaistSwing)
         {
 
         }

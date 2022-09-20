@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public InesFujin() : base("アイネスフウジン", Properties.Resources.アイネスフウジン歌唱)
+        public InesFujin() : base("アイネスフウジン", Properties.Resources.InesFujin_Dance_Sing)
         {
 
         }

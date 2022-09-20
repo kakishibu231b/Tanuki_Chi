@@ -76,6 +76,7 @@
     <Compile Include="Maruzensky.cs" />
     <Compile Include="MihonoBourbon.cs" />
     <Compile Include="OjuChosan.cs" />
+    <Compile Include="Properties\Resources.Designer.cs" />
     <Compile Include="SeiunSky.cs" />
     <Compile Include="SilenceSuzuka.cs" />
     <Compile Include="SiriusSymboli.cs" />
@@ -103,14 +104,8 @@
     <Compile Include="TwinTurbo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="TanukiController.resx">
       <DependentUpon>TanukiController.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,26 +126,26 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\OjuChosan\OjuChosan_Front_WaistSwing.gif" />
-    <Content Include="Resources\HayakawaTazuna\HayakawaTazuna_Smiling.gif" />
-    <Content Include="Resources\HayakawaTazuna\HayakawaTazuna_Smile.gif" />
-    <Content Include="Resources\InesFujin\InesFujin_sing.gif" />
-    <Content Include="Resources\ElCondorPasa\ElCondorPasa_Dance_Smiling.gif" />
-    <Content Include="Resources\KingHalo\KingHalo_Dance_Smiling.gif" />
-    <Content Include="Resources\GrassWonder\GrassWonder_Dance_Smiling.gif" />
-    <Content Include="Resources\GoldShip\GoldShip_Front_Smiling.gif" />
-    <Content Include="Resources\SilenceSuzuka\SilenceSuzuka_Dance_Sing.gif" />
-    <Content Include="Resources\SiriusSymboli\SiriusSymboli_Front_Smiling.gif" />
-    <Content Include="Resources\SymboliRudolf\SymboliRudolf_Front_Smiling.gif" />
-    <Content Include="Resources\SpecialWeek\SpecialWeek_Dance_Smiling.gif" />
-    <Content Include="Resources\SmartFalcon\SmartFalcon_Dance_Sing.gif" />
-    <Content Include="Resources\SeiunSky\SeiunSky_Dance_Smiling.gif" />
-    <Content Include="Resources\TwinTurbo\TwinTurbo_Dance_HighSpirits.gif" />
-    <Content Include="Resources\TsurumaruTsuyoshi\TsurumaruTsuyoshi_Dance_Smiling.gif" />
-    <Content Include="Resources\TokaiTeio\TokaiTeio_Front_Smiling.gif" />
-    <Content Include="Resources\Hatsuratsu\Hatsuratsu_Front_Smiling.gif" />
-    <Content Include="Resources\Maruzensky\MaruzenskyMS_Dance_Sing.gif" />
-    <Content Include="Resources\MihonoBourbon\MihonoBourbon_Dance_Sing.gif" />
+    <Content Include="Resources\OjuChosan\オジュウチョウサン腰ふり.gif" />
+    <Content Include="Resources\HayakawaTazuna\HayakawaTazuna_smiling.gif" />
+    <Content Include="Resources\HayakawaTazuna\HayakawaTazuna_smile.gif" />
+    <Content Include="Resources\アイネスフウジン\アイネスフウジン歌唱.gif" />
+    <Content Include="Resources\エルコンドルパサー\エルコンドルパサーにっこり.gif" />
+    <Content Include="Resources\キングヘイロー\キングヘイローはりきり.gif" />
+    <Content Include="Resources\グラスワンダー\グラスワンダーにっこり.gif" />
+    <Content Include="Resources\ゴールドシップ\ゴルシ直立ななめおだやか.gif" />
+    <Content Include="Resources\サイレンススズカ\サイレンススズカ歌唱.gif" />
+    <Content Include="Resources\シリウスシンボリ\シリウスシンボリ立ちにっこり.gif" />
+    <Content Include="Resources\シンボリルドルフ\ションボリ立ち正面ｖ.gif" />
+    <Content Include="Resources\スペシャルウィーク\スペシャルウィークにっこり.gif" />
+    <Content Include="Resources\スマートファルコン\スマートファルコンコンサート.gif" />
+    <Content Include="Resources\セイウンスカイ\セイウンスカイにっこり.gif" />
+    <Content Include="Resources\ツインターボ\ターボはりきり.gif" />
+    <Content Include="Resources\ツルマルツヨシ\ツルマルツヨシにっこり.gif" />
+    <Content Include="Resources\トウカイテイオー\テイオー棒立ちにっこり.gif" />
+    <Content Include="Resources\ハツラツ\オグリキャップ幼少期立ちｖ.gif" />
+    <Content Include="Resources\マルゼンスキー\マルゼンスキー今風1歌唱.gif" />
+    <Content Include="Resources\ミホノブルボン\ミホノブルボン歌唱.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public GrassWonder() : base("グラスワンダー", Properties.Resources.グラスワンダーにっこり)
+        public GrassWonder() : base("グラスワンダー", Properties.Resources.GrassWonder_Dance_Smiling)
         {
 
         }

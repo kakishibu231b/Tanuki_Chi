@@ -63,9 +63,9 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap アイネスフウジン歌唱 {
+        internal static System.Drawing.Bitmap ElCondorPasa_Dance_Smiling {
             get {
-                object obj = ResourceManager.GetObject("アイネスフウジン歌唱", resourceCulture);
+                object obj = ResourceManager.GetObject("ElCondorPasa_Dance_Smiling", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap エルコンドルパサーにっこり {
+        internal static System.Drawing.Bitmap GoldShip_Front_Smiling {
             get {
-                object obj = ResourceManager.GetObject("エルコンドルパサーにっこり", resourceCulture);
+                object obj = ResourceManager.GetObject("GoldShip_Front_Smiling", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap オグリキャップ幼少期立ちｖ {
+        internal static System.Drawing.Bitmap GrassWonder_Dance_Smiling {
             get {
-                object obj = ResourceManager.GetObject("オグリキャップ幼少期立ちｖ", resourceCulture);
+                object obj = ResourceManager.GetObject("GrassWonder_Dance_Smiling", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap オジュウチョウサン腰ふり {
+        internal static System.Drawing.Bitmap Hatsuratsu_Front_Smiling {
             get {
-                object obj = ResourceManager.GetObject("オジュウチョウサン腰ふり", resourceCulture);
+                object obj = ResourceManager.GetObject("Hatsuratsu_Front_Smiling", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap キングヘイローはりきり {
+        internal static System.Drawing.Bitmap HayakawaTazuna_Front_Smile {
             get {
-                object obj = ResourceManager.GetObject("キングヘイローはりきり", resourceCulture);
+                object obj = ResourceManager.GetObject("HayakawaTazuna_Front_Smile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap グラスワンダーにっこり {
+        internal static System.Drawing.Bitmap HayakawaTazuna_Front_Smiling {
             get {
-                object obj = ResourceManager.GetObject("グラスワンダーにっこり", resourceCulture);
+                object obj = ResourceManager.GetObject("HayakawaTazuna_Front_Smiling", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap ゴルシ直立ななめおだやか {
+        internal static System.Drawing.Bitmap InesFujin_Dance_Sing {
             get {
-                object obj = ResourceManager.GetObject("ゴルシ直立ななめおだやか", resourceCulture);
+                object obj = ResourceManager.GetObject("InesFujin_Dance_Sing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap サイレンススズカ歌唱 {
+        internal static System.Drawing.Bitmap KingHalo_Dance_Smiling {
             get {
-                object obj = ResourceManager.GetObject("サイレンススズカ歌唱", resourceCulture);
+                object obj = ResourceManager.GetObject("KingHalo_Dance_Smiling", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap ションボリ立ち正面ｖ {
+        internal static System.Drawing.Bitmap MaruzenskyMS_Dance_Sing {
             get {
-                object obj = ResourceManager.GetObject("ションボリ立ち正面ｖ", resourceCulture);
+                object obj = ResourceManager.GetObject("MaruzenskyMS_Dance_Sing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap シリウスシンボリ立ちにっこり {
+        internal static System.Drawing.Bitmap MihonoBourbon_Dance_Sing {
             get {
-                object obj = ResourceManager.GetObject("シリウスシンボリ立ちにっこり", resourceCulture);
+                object obj = ResourceManager.GetObject("MihonoBourbon_Dance_Sing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap スペシャルウィークにっこり {
+        internal static System.Drawing.Bitmap OjuChosan_Front_WaistSwing {
             get {
-                object obj = ResourceManager.GetObject("スペシャルウィークにっこり", resourceCulture);
+                object obj = ResourceManager.GetObject("OjuChosan_Front_WaistSwing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap スマートファルコンコンサート {
+        internal static System.Drawing.Bitmap SeiunSky_Dance_Smiling {
             get {
-                object obj = ResourceManager.GetObject("スマートファルコンコンサート", resourceCulture);
+                object obj = ResourceManager.GetObject("SeiunSky_Dance_Smiling", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +183,9 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap セイウンスカイにっこり {
+        internal static System.Drawing.Bitmap SilenceSuzuka_Dance_Sing {
             get {
-                object obj = ResourceManager.GetObject("セイウンスカイにっこり", resourceCulture);
+                object obj = ResourceManager.GetObject("SilenceSuzuka_Dance_Sing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +193,9 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap ターボはりきり {
+        internal static System.Drawing.Bitmap SiriusSymboli_Front_Smiling {
             get {
-                object obj = ResourceManager.GetObject("ターボはりきり", resourceCulture);
+                object obj = ResourceManager.GetObject("SiriusSymboli_Front_Smiling", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +203,9 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap ツルマルツヨシにっこり {
+        internal static System.Drawing.Bitmap SmartFalcon_Dance_Sing {
             get {
-                object obj = ResourceManager.GetObject("ツルマルツヨシにっこり", resourceCulture);
+                object obj = ResourceManager.GetObject("SmartFalcon_Dance_Sing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +213,9 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap テイオー棒立ちにっこり {
+        internal static System.Drawing.Bitmap SpecialWeek_Dance_Smiling {
             get {
-                object obj = ResourceManager.GetObject("テイオー棒立ちにっこり", resourceCulture);
+                object obj = ResourceManager.GetObject("SpecialWeek_Dance_Smiling", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +223,9 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap マルゼンスキー今風1歌唱 {
+        internal static System.Drawing.Bitmap SymboliRudolf_Front_Smiling {
             get {
-                object obj = ResourceManager.GetObject("マルゼンスキー今風1歌唱", resourceCulture);
+                object obj = ResourceManager.GetObject("SymboliRudolf_Front_Smiling", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +233,9 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap ミホノブルボン歌唱 {
+        internal static System.Drawing.Bitmap TokaiTeio_Front_Smiling {
             get {
-                object obj = ResourceManager.GetObject("ミホノブルボン歌唱", resourceCulture);
+                object obj = ResourceManager.GetObject("TokaiTeio_Front_Smiling", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +243,9 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap 関係者_駿川たづな直立にっこり {
+        internal static System.Drawing.Bitmap TsurumaruTsuyoshi_Dance_Smiling {
             get {
-                object obj = ResourceManager.GetObject("関係者_駿川たづな直立にっこり", resourceCulture);
+                object obj = ResourceManager.GetObject("TsurumaruTsuyoshi_Dance_Smiling", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,9 +253,9 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap 関係者_駿川たづな直立笑顔 {
+        internal static System.Drawing.Bitmap TwinTurbo_Dance_HighSpirits {
             get {
-                object obj = ResourceManager.GetObject("関係者_駿川たづな直立笑顔", resourceCulture);
+                object obj = ResourceManager.GetObject("TwinTurbo_Dance_HighSpirits", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

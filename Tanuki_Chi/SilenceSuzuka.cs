@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public SilenceSuzuka() : base("サイレンススズカ", Properties.Resources.サイレンススズカ歌唱)
+        public SilenceSuzuka() : base("サイレンススズカ", Properties.Resources.SilenceSuzuka_Dance_Sing)
         {
 
         }

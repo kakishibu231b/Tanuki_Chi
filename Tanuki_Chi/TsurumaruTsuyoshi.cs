@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public TsurumaruTsuyoshi() : base("ツルマルツヨシ", Properties.Resources.ツルマルツヨシにっこり)
+        public TsurumaruTsuyoshi() : base("ツルマルツヨシ", Properties.Resources.TsurumaruTsuyoshi_Dance_Smiling)
         {
 
         }

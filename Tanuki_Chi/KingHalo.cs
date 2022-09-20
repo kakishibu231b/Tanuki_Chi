@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public KingHalo() : base("キングヘイロー", Properties.Resources.キングヘイローはりきり)
+        public KingHalo() : base("キングヘイロー", Properties.Resources.KingHalo_Dance_Smiling)
         {
 
         }

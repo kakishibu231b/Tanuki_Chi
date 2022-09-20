@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public SymboliRudolf() : base("シンボリルドルフ", Properties.Resources.ションボリ立ち正面ｖ)
+        public SymboliRudolf() : base("シンボリルドルフ", Properties.Resources.SymboliRudolf_Front_Smiling)
         {
 
         }

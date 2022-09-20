@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public GoldShip() : base("ゴールドシップ", Properties.Resources.ゴルシ直立ななめおだやか)
+        public GoldShip() : base("ゴールドシップ", Properties.Resources.GoldShip_Front_Smiling)
         {
 
         }

@@ -7,7 +7,7 @@ namespace Tanuki_Chi
          /// <summary>
         /// 
         /// </summary>
-        public SeiunSky() : base("セイウンスカイ", Properties.Resources.セイウンスカイにっこり)
+        public SeiunSky() : base("セイウンスカイ", Properties.Resources.SeiunSky_Dance_Smiling)
         {
 
         }
