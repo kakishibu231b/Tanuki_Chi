@@ -121,5 +121,10 @@ namespace Tanuki_Chi
         {
             ImageAnimator.UpdateFrames(BackgroundImage);
         }
+
+        private void TanukiView_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }

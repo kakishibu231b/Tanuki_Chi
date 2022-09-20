@@ -48,6 +48,7 @@
             this.TransparencyKey = System.Drawing.SystemColors.Control;
             this.Load += new System.EventHandler(this.TanukiView_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.TanukiView_Paint);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TanukiView_MouseDown);
             this.ResumeLayout(false);
 
         }
