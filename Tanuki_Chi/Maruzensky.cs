@@ -7,9 +7,17 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public Maruzensky() : base("マルゼンスキー", Properties.Resources.MaruzenskyMS_Dance_Sing)
+        public Maruzensky() : base("マルゼンスキー")
         {
 
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public override Image InitImage()
+        {
+            return Properties.Resources.MaruzenskyMS_Dance_Sing;
         }
 
         /// <summary>
@@ -19,11 +27,17 @@ namespace Tanuki_Chi
         /// <returns></returns>
         public override Image Command(string command)
         {
-            Image image = InitImage;
+            Image image = null;
 
             if (command == "MouseDown")
             {
 
+            }
+
+            if (image == null)
+            {
+                CurrentImage = "";
+                image = InitImage();
             }
 
             return image;

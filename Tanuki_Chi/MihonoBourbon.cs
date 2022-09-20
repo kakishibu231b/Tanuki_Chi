@@ -7,9 +7,17 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public MihonoBourbon() : base("ミホノブルボン", Properties.Resources.MihonoBourbon_Dance_Sing)
+        public MihonoBourbon() : base("ミホノブルボン")
         {
 
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public override Image InitImage()
+        {
+            return Properties.Resources.MihonoBourbon_Dance_Sing;
         }
 
         /// <summary>
@@ -19,11 +27,17 @@ namespace Tanuki_Chi
         /// <returns></returns>
         public override Image Command(string command)
         {
-            Image image = InitImage;
+            Image image = null;
 
             if (command == "MouseDown")
             {
 
+            }
+
+            if (image == null)
+            {
+                CurrentImage = "";
+                image = InitImage();
             }
 
             return image;

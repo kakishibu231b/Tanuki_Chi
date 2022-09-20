@@ -7,9 +7,17 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public GoldShip() : base("ゴールドシップ", Properties.Resources.GoldShip_Front_Smiling)
+        public GoldShip() : base("ゴールドシップ")
         {
 
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public override Image InitImage()
+        {
+            return Properties.Resources.GoldShip_Front_Smiling;
         }
 
         /// <summary>
@@ -19,11 +27,17 @@ namespace Tanuki_Chi
         /// <returns></returns>
         public override Image Command(string command)
         {
-            Image image = InitImage;
+            Image image = null;
 
             if (command == "MouseDown")
             {
 
+            }
+
+            if (image == null)
+            {
+                CurrentImage = "";
+                image = InitImage();
             }
 
             return image;

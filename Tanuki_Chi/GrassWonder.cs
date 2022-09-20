@@ -7,9 +7,17 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public GrassWonder() : base("グラスワンダー", Properties.Resources.GrassWonder_Dance_Smiling)
+        public GrassWonder() : base("グラスワンダー")
         {
 
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public override Image InitImage()
+        {
+            return Properties.Resources.GrassWonder_Dance_Smiling;
         }
 
         /// <summary>
@@ -19,11 +27,17 @@ namespace Tanuki_Chi
         /// <returns></returns>
         public override Image Command(string command)
         {
-            Image image = InitImage;
+            Image image = null;
 
             if (command == "MouseDown")
             {
 
+            }
+
+            if (image == null)
+            {
+                CurrentImage = "";
+                image = InitImage();
             }
 
             return image;

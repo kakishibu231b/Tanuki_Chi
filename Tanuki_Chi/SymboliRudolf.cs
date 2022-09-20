@@ -7,9 +7,17 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public SymboliRudolf() : base("シンボリルドルフ", Properties.Resources.SymboliRudolf_Front_Smiling)
+        public SymboliRudolf() : base("シンボリルドルフ")
         {
 
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public override Image InitImage()
+        {
+            return Properties.Resources.SymboliRudolf_Front_Smiling;
         }
 
         /// <summary>
@@ -19,11 +27,17 @@ namespace Tanuki_Chi
         /// <returns></returns>
         public override Image Command(string command)
         {
-            Image image = InitImage;
+            Image image = null;
 
             if (command == "MouseDown")
             {
 
+            }
+
+            if (image == null)
+            {
+                CurrentImage = "";
+                image = InitImage();
             }
 
             return image;

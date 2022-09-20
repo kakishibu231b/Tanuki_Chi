@@ -178,4 +178,7 @@
   <data name="MihonoBourbon_Dance_Sing" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\MihonoBourbon\MihonoBourbon_Dance_Sing.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="OjuChosan_Dance_Smiling" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ojuchosan\ojuchosan_dance_smiling.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

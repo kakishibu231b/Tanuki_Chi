@@ -28,7 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.timerMouseDown = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
+            // 
+            // timerMouseDown
+            // 
+            this.timerMouseDown.Interval = 5000;
+            this.timerMouseDown.Tick += new System.EventHandler(this.timerMouseDown_Tick);
             // 
             // TanukiView
             // 
@@ -54,5 +61,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer timerMouseDown;
     }
 }

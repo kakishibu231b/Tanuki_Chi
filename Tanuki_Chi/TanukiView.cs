@@ -39,7 +39,7 @@ namespace Tanuki_Chi
         private void TanukiView_Load(object sender, EventArgs e)
         {
             // 初期表示画像取得
-            Image image = model.InitImage;
+            Image image = model.InitImage();
 
             // 境界取得
             tanukiRectangle = TanukiCommon.getImageBorder(image);
@@ -57,7 +57,7 @@ namespace Tanuki_Chi
         /// <param name="image"></param>
         public void TanukiView_SetBackgroundImage(Image image)
         {
-            if (BackgroundImage == image)
+            if (BackgroundImage != null && BackgroundImage.Equals(image))
             {
                 return;
             }
@@ -68,8 +68,6 @@ namespace Tanuki_Chi
 
             // 初期表示画像を貼り付ける。
             BackgroundImage = image;
-
-            model.CurrentImage = image;
 
             // アニメーション設定
             ImageAnimator.Animate(BackgroundImage, new EventHandler(TanukiView_ImageFrameChanged));
@@ -138,7 +136,46 @@ namespace Tanuki_Chi
         /// <param name="e"></param>
         private void TanukiView_MouseDown(object sender, MouseEventArgs e)
         {
+            if (timerMouseDown.Enabled)
+            {
+                timerMouseDown.Stop();
+                timerMouseDown.Start();
+                return;
+            }
+
+            BackgroundImage.Dispose();
             Image image = model.Command("MouseDown");
+            setHeightPostion(image);
+            TanukiView_SetBackgroundImage(image);
+            timerMouseDown.Start();
+        }
+
+        /// <summary>
+        /// 高さ位置調整
+        /// </summary>
+        /// <param name="image"></param>
+        /// <returns></returns>
+        public void setHeightPostion(Image image)
+        {
+            int screen_height = Screen.PrimaryScreen.WorkingArea.Height;
+            int intBottom = TanukiCommon.getBottom(image);
+            Point location = Location;
+            location.Y = screen_height - intBottom;
+            Location = location;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void timerMouseDown_Tick(object sender, EventArgs e)
+        {
+            timerMouseDown.Stop();
+
+            BackgroundImage.Dispose();
+            Image image = model.Command("");
+            setHeightPostion(image);
             TanukiView_SetBackgroundImage(image);
         }
     }

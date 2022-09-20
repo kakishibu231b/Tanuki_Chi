@@ -7,9 +7,17 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public HayakawaTazuna() : base("駿川たづな", Properties.Resources.HayakawaTazuna_Front_Smile)
+        public HayakawaTazuna() : base("駿川たづな")
         {
             
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public override Image InitImage()
+        {
+            return Properties.Resources.HayakawaTazuna_Front_Smiling;
         }
 
         /// <summary>
@@ -19,14 +27,21 @@ namespace Tanuki_Chi
         /// <returns></returns>
         public override Image Command(string command)
         {
-            Image image = InitImage;
+            Image image = null;
 
-            if(command == "MouseDown")
+            if (command == "MouseDown")
             {
-                if(CurrentImage != Properties.Resources.HayakawaTazuna_Front_Smiling)
+                if (CurrentImage != "HayakawaTazuna_Front_Smile")
                 {
-                    image = Properties.Resources.HayakawaTazuna_Front_Smiling;
+                    CurrentImage = "HayakawaTazuna_Front_Smile";
+                    image = Properties.Resources.HayakawaTazuna_Front_Smile;
                 }
+            }
+
+            if (image == null)
+            {
+                CurrentImage = "";
+                image = InitImage();
             }
 
             return image;

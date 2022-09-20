@@ -5,8 +5,7 @@ namespace Tanuki_Chi
     public abstract class TanukiModel
     {
         private string name;
-        private Image initImage;
-        private Image currentImage;
+        private string currentImage;
 
         /// <summary>
         /// 
@@ -20,11 +19,9 @@ namespace Tanuki_Chi
         /// 
         /// </summary>
         /// <param name="name"></param>
-        /// <param name="initImage"></param>
-        public TanukiModel(string name, Image initImage)
+        public TanukiModel(string name)
         {
             this.name = name;
-            this.initImage = initImage;
         }
 
         /// <summary>
@@ -38,15 +35,12 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public Image InitImage
-        {
-            get { return initImage; }
-        }
+        public abstract Image InitImage();
 
         /// <summary>
         /// 
         /// </summary>
-        public Image CurrentImage
+        public string CurrentImage
         {
             get { return currentImage; }
             set { currentImage = value; }

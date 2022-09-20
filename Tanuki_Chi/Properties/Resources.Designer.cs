@@ -163,6 +163,16 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap OjuChosan_Dance_Smiling {
+            get {
+                object obj = ResourceManager.GetObject("OjuChosan_Dance_Smiling", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap OjuChosan_Front_WaistSwing {
             get {
                 object obj = ResourceManager.GetObject("OjuChosan_Front_WaistSwing", resourceCulture);
