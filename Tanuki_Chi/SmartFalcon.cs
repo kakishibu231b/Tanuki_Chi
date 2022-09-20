@@ -4,16 +4,29 @@ namespace Tanuki_Chi
 {
     public class SmartFalcon : TanukiModel
     {
-        Image initImage = Properties.Resources.スマートファルコンコンサート;
-
-        public Image InitImage
+        /// <summary>
+        /// 
+        /// </summary>
+        public SmartFalcon() : base("スマートファルコン", Properties.Resources.スマートファルコンコンサート)
         {
-            get { return initImage; }
+
         }
 
-        public Image Command(string command)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
+        public override Image Command(string command)
         {
-            return initImage;
+            Image image = InitImage;
+
+            if (command == "MouseDown")
+            {
+
+            }
+
+            return image;
         }
     }
 }

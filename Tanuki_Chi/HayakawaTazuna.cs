@@ -4,20 +4,29 @@ namespace Tanuki_Chi
 {
     public class HayakawaTazuna : TanukiModel
     {
-        Image initImage = Properties.Resources.関係者_駿川たづな直立にっこり;
-
-        public Image InitImage
+        /// <summary>
+        /// 
+        /// </summary>
+        public HayakawaTazuna() : base("駿川たづな", Properties.Resources.関係者_駿川たづな直立にっこり)
         {
-            get { return initImage; }
+            
         }
 
-        public Image Command(string command)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
+        public override Image Command(string command)
         {
-            Image image = initImage;
+            Image image = InitImage;
 
             if(command == "MouseDown")
             {
-                image = Properties.Resources.関係者_駿川たづな直立笑顔;
+                if(CurrentImage != Properties.Resources.関係者_駿川たづな直立笑顔)
+                {
+                    image = Properties.Resources.関係者_駿川たづな直立笑顔;
+                }
             }
 
             return image;

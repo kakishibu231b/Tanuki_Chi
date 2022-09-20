@@ -4,16 +4,29 @@ namespace Tanuki_Chi
 {
     public class KingHalo : TanukiModel
     {
-        Image initImage = Properties.Resources.キングヘイローはりきり;
-
-        public Image InitImage
+        /// <summary>
+        /// 
+        /// </summary>
+        public KingHalo() : base("キングヘイロー", Properties.Resources.キングヘイローはりきり)
         {
-            get { return initImage; }
+
         }
 
-        public Image Command(string command)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
+        public override Image Command(string command)
         {
-            return initImage;
+            Image image = InitImage;
+
+            if (command == "MouseDown")
+            {
+
+            }
+
+            return image;
         }
     }
 }

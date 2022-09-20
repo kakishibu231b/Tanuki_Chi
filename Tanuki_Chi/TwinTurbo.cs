@@ -4,16 +4,29 @@ namespace Tanuki_Chi
 {
     public class TwinTurbo : TanukiModel
     {
-        Image initImage = Properties.Resources.ターボはりきり;
-
-        public Image InitImage
+        /// <summary>
+        /// 
+        /// </summary>
+        public TwinTurbo() : base("ツインターボ", Properties.Resources.ターボはりきり)
         {
-            get { return initImage; }
+
         }
 
-        public Image Command(string command)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
+        public override Image Command(string command)
         {
-            return initImage;
+            Image image = InitImage;
+
+            if (command == "MouseDown")
+            {
+
+            }
+
+            return image;
         }
     }
 }

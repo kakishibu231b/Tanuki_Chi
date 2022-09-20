@@ -4,16 +4,29 @@ namespace Tanuki_Chi
 {
     public class MihonoBourbon : TanukiModel
     {
-        Image initImage = Properties.Resources.ミホノブルボン歌唱;
-
-        public Image InitImage
+        /// <summary>
+        /// 
+        /// </summary>
+        public MihonoBourbon() : base("ミホノブルボン", Properties.Resources.ミホノブルボン歌唱)
         {
-            get { return initImage; }
+
         }
 
-        public Image Command(string command)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
+        public override Image Command(string command)
         {
-            return initImage;
+            Image image = InitImage;
+
+            if (command == "MouseDown")
+            {
+
+            }
+
+            return image;
         }
     }
 }

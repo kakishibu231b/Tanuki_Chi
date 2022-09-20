@@ -69,6 +69,8 @@ namespace Tanuki_Chi
             // 初期表示画像を貼り付ける。
             BackgroundImage = image;
 
+            model.CurrentImage = image;
+
             // アニメーション設定
             ImageAnimator.Animate(BackgroundImage, new EventHandler(TanukiView_ImageFrameChanged));
         }
@@ -129,6 +131,11 @@ namespace Tanuki_Chi
             ImageAnimator.UpdateFrames(BackgroundImage);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TanukiView_MouseDown(object sender, MouseEventArgs e)
         {
             Image image = model.Command("MouseDown");

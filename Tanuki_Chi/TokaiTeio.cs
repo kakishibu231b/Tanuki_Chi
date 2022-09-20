@@ -4,16 +4,29 @@ namespace Tanuki_Chi
 {
     public class TokaiTeio : TanukiModel
     {
-        Image initImage = Properties.Resources.テイオー棒立ちにっこり;
-
-        public Image InitImage
+        /// <summary>
+        /// 
+        /// </summary>
+        public TokaiTeio() : base("トウカイテイオー", Properties.Resources.テイオー棒立ちにっこり)
         {
-            get { return initImage; }
+
         }
 
-        public Image Command(string command)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
+        public override Image Command(string command)
         {
-            return initImage;
+            Image image = InitImage;
+
+            if (command == "MouseDown")
+            {
+
+            }
+
+            return image;
         }
     }
 }

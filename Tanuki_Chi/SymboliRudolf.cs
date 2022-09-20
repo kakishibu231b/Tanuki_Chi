@@ -4,16 +4,29 @@ namespace Tanuki_Chi
 {
     public class SymboliRudolf : TanukiModel
     {
-        Image initImage = Properties.Resources.ションボリ立ち正面ｖ;
-
-        public Image InitImage
+        /// <summary>
+        /// 
+        /// </summary>
+        public SymboliRudolf() : base("シンボリルドルフ", Properties.Resources.ションボリ立ち正面ｖ)
         {
-            get { return initImage; }
+
         }
 
-        public Image Command(string command)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
+        public override Image Command(string command)
         {
-            return initImage;
+            Image image = InitImage;
+
+            if (command == "MouseDown")
+            {
+
+            }
+
+            return image;
         }
     }
 }
