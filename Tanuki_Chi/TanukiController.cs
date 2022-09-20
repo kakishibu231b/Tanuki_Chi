@@ -32,7 +32,9 @@ namespace Tanuki_Chi
         /// <param name="e"></param>
         private void Tanuki_Load(object sender, EventArgs e)
         {
-            //tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
+            Application.Idle += new EventHandler(Tanuki_Idle);
+
+            tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
             //tanukiViews.Add(new TanukiView(new OjuChosan(), this));
 
             //tanukiViews.Add(new TanukiView(new ElCondorPasa(), this));
@@ -58,6 +60,16 @@ namespace Tanuki_Chi
             {
                 view.Show(this);
             }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Tanuki_Idle(object sender, EventArgs e)
+        {
+
         }
     }
 }
