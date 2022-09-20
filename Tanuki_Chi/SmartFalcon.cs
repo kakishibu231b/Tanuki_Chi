@@ -10,5 +10,10 @@ namespace Tanuki_Chi
         {
             get { return initImage; }
         }
+
+        public Image Command(string command)
+        {
+            return initImage;
+        }
     }
 }
