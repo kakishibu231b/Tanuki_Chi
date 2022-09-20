@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tanuki_Chi
@@ -36,7 +30,7 @@ namespace Tanuki_Chi
         /// 
         /// </summary>
         public Rectangle tanukiRectangle;
-
+        
         /// <summary>
         /// 
         /// </summary>
@@ -47,22 +41,33 @@ namespace Tanuki_Chi
             // 初期表示画像取得
             Image image = model.InitImage;
 
-            // サイズは初期表示画像を基に決定する。
-            Height = image.Height;
-            Width = image.Width;
-
-            // 初期表示画像を貼り付ける。
-            if (BackgroundImage != null)
-            {
-                BackgroundImage.Dispose();
-            }
-            BackgroundImage = image;
-
             // 境界取得
             tanukiRectangle = TanukiCommon.getImageBorder(image);
 
             // 初期位置取得
             Location = getInitLocation(tanukiRectangle);
+
+            // 背景設定
+            TanukiView_SetBackgroundImage(image);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="image"></param>
+        public void TanukiView_SetBackgroundImage(Image image)
+        {
+            if (BackgroundImage == image)
+            {
+                return;
+            }
+
+            // サイズは初期表示画像を基に決定する。
+            Height = image.Height;
+            Width = image.Width;
+
+            // 初期表示画像を貼り付ける。
+            BackgroundImage = image;
 
             // アニメーション設定
             ImageAnimator.Animate(BackgroundImage, new EventHandler(TanukiView_ImageFrameChanged));
@@ -77,7 +82,9 @@ namespace Tanuki_Chi
         {
             int screen_width = Screen.PrimaryScreen.WorkingArea.Width;
             int screen_height = Screen.PrimaryScreen.WorkingArea.Height;
-            Point point = new Point(screen_width - rectangle.Right, screen_height - rectangle.Bottom);
+
+            // マージン10pixel
+            Point point = new Point(screen_width - rectangle.Right - 10, screen_height - rectangle.Bottom);
 
             TanukiController tanukiController = Owner as TanukiController;
             foreach (TanukiView view in tanukiController.tanukiViews)
@@ -124,7 +131,8 @@ namespace Tanuki_Chi
 
         private void TanukiView_MouseDown(object sender, MouseEventArgs e)
         {
-
+            Image image = model.Command("MouseDown");
+            TanukiView_SetBackgroundImage(image);
         }
     }
 }
