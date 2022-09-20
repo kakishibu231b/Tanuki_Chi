@@ -249,5 +249,15 @@ namespace Tanuki_Chi.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap 関係者_駿川たづな直立笑顔 {
+            get {
+                object obj = ResourceManager.GetObject("関係者_駿川たづな直立笑顔", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

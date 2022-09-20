@@ -13,7 +13,14 @@ namespace Tanuki_Chi
 
         public Image Command(string command)
         {
-            return initImage;
+            Image image = initImage;
+
+            if(command == "MouseDown")
+            {
+                image = Properties.Resources.関係者_駿川たづな直立笑顔;
+            }
+
+            return image;
         }
     }
 }

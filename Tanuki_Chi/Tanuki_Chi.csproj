@@ -133,6 +133,7 @@
   <ItemGroup>
     <Content Include="Resources\%28幻覚%29オジュウチョウサン\オジュウチョウサン腰ふり.gif" />
     <Content Include="Resources\%28関係者%29駿川たづな\関係者_駿川たづな直立にっこり.gif" />
+    <Content Include="Resources\%28関係者%29駿川たづな\関係者_駿川たづな直立笑顔.gif" />
     <Content Include="Resources\アイネスフウジン\アイネスフウジン歌唱.gif" />
     <Content Include="Resources\エルコンドルパサー\エルコンドルパサーにっこり.gif" />
     <Content Include="Resources\キングヘイロー\キングヘイローはりきり.gif" />

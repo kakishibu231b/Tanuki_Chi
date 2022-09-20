@@ -34,8 +34,8 @@ namespace Tanuki_Chi
         {
             Application.Idle += new EventHandler(Tanuki_Idle);
 
-            tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
-            //tanukiViews.Add(new TanukiView(new OjuChosan(), this));
+            //tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
+            tanukiViews.Add(new TanukiView(new OjuChosan(), this));
 
             //tanukiViews.Add(new TanukiView(new ElCondorPasa(), this));
             //tanukiViews.Add(new TanukiView(new GrassWonder(), this));

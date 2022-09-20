@@ -175,4 +175,7 @@
   <data name="関係者_駿川たづな直立にっこり" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\(関係者)駿川たづな\関係者_駿川たづな直立にっこり.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="関係者_駿川たづな直立笑顔" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\(関係者)駿川たづな\関係者_駿川たづな直立笑顔.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
