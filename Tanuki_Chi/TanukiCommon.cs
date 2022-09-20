@@ -18,7 +18,7 @@ namespace Tanuki_Chi
         /// <returns></returns>
         public static Rectangle getImageBorder(Image image)
         {
-            Bitmap bitmap = new Bitmap(image);
+            Bitmap bitmap = image as Bitmap;
 
             FrameDimension frameDimension = new FrameDimension(bitmap.FrameDimensionsList[0]);
             int int_frame_count = bitmap.GetFrameCount(frameDimension);
@@ -124,8 +124,6 @@ namespace Tanuki_Chi
                     }
                 }
             }
-
-            bitmap.Dispose();
 
             return new Rectangle(int_left, int_top, int_right - int_left, int_bottom - int_top);
         }
