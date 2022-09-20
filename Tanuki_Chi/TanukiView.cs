@@ -44,17 +44,27 @@ namespace Tanuki_Chi
         /// <param name="e"></param>
         private void TanukiView_Load(object sender, EventArgs e)
         {
+            // 初期表示画像取得
             Image image = model.InitImage;
+
+            // サイズは初期表示画像を基に決定する。
+            Height = image.Height;
+            Width = image.Width;
+
+            // 初期表示画像を貼り付ける。
             if (BackgroundImage != null)
             {
                 BackgroundImage.Dispose();
             }
             BackgroundImage = image;
 
+            // 境界取得
             tanukiRectangle = TanukiCommon.getImageBorder(image);
 
+            // 初期位置取得
             Location = getInitLocation(tanukiRectangle);
 
+            // アニメーション設定
             ImageAnimator.Animate(BackgroundImage, new EventHandler(TanukiView_ImageFrameChanged));
         }
 
