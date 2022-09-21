@@ -61,9 +61,9 @@ namespace Tanuki_Chi
                 view.Show(this);
             }
 
-            TanukiItem tanukiItem = new TanukiItem();
-            tanukiItem.Location = new Point(1024,768);
-            tanukiItem.Show(this);
+            //TanukiItem tanukiItem = new TanukiItem();
+            //tanukiItem.Location = new Point(1024,768);
+            //tanukiItem.Show(this);
         }
 
         /// <summary>
@@ -73,7 +73,18 @@ namespace Tanuki_Chi
         /// <param name="e"></param>
         private void Tanuki_Idle(object sender, EventArgs e)
         {
-
+            bool bolVisible = false;
+            foreach (var view in tanukiViews)
+            {
+                if (view.Visible)
+                {
+                    bolVisible = true;
+                }
+            }
+            if (!bolVisible)
+            {
+                Close();
+            }
         }
     }
 }

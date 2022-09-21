@@ -8,6 +8,8 @@ namespace Tanuki_Chi
     {
         public TanukiModel model;
 
+        bool bolTranceparentMode = false;
+
         /// <summary>
         /// コンストラクタ
         /// </summary>
@@ -24,6 +26,19 @@ namespace Tanuki_Chi
             InitializeComponent();
             this.model = model;
             this.Owner = owner;
+
+            if (!bolTranceparentMode)
+            {
+                // 境界取得
+                Rectangle rectangle = TanukiCommon.getImageBorder(Properties.Resources.room_yuka_tatami);
+                rectangle = new Rectangle(rectangle.X + 10, rectangle.Y + 10, rectangle.Width - 20, rectangle.Height - 20);
+                Bounds = rectangle;
+
+                Bitmap bitmap = new Bitmap(Width, Height);
+                Graphics g = Graphics.FromImage(bitmap);
+                g.DrawImageUnscaled(Properties.Resources.room_yuka_tatami, 0 - rectangle.Left, 0 - rectangle.Top, rectangle.Width, rectangle.Height);
+                pictureBoxTanuki.BackgroundImage = bitmap;
+            }
         }
 
         /// <summary>
@@ -44,8 +59,11 @@ namespace Tanuki_Chi
             // 境界取得
             tanukiRectangle = TanukiCommon.getImageBorder(image);
 
-            // 初期位置取得
-            Location = getInitLocation(tanukiRectangle);
+            if (bolTranceparentMode)
+            {
+                // 初期位置取得
+                Location = getInitLocation(tanukiRectangle);
+            }
 
             // 背景設定
             TanukiView_SetBackgroundImage(image);
@@ -57,20 +75,36 @@ namespace Tanuki_Chi
         /// <param name="image"></param>
         public void TanukiView_SetBackgroundImage(Image image)
         {
-            if (BackgroundImage != null && BackgroundImage.Equals(image))
+            if (bolTranceparentMode)
             {
-                return;
+                if (BackgroundImage != null && BackgroundImage.Equals(image))
+                {
+                    return;
+                }
+
+                // サイズは初期表示画像を基に決定する。
+                Height = image.Height;
+                Width = image.Width;
+
+                // 初期表示画像を貼り付ける。
+                BackgroundImage = image;
+
+                // アニメーション設定
+                ImageAnimator.Animate(BackgroundImage, new EventHandler(TanukiView_ImageFrameChanged));
             }
+            else
+            {
+                if (pictureBoxTanuki != null && pictureBoxTanuki.Equals(image))
+                {
+                    return;
+                }
 
-            // サイズは初期表示画像を基に決定する。
-            Height = image.Height;
-            Width = image.Width;
+                // 初期表示画像を貼り付ける。
+                pictureBoxTanuki.Image = image;
 
-            // 初期表示画像を貼り付ける。
-            BackgroundImage = image;
-
-            // アニメーション設定
-            ImageAnimator.Animate(BackgroundImage, new EventHandler(TanukiView_ImageFrameChanged));
+                // アニメーション設定
+                ImageAnimator.Animate(pictureBoxTanuki.Image, new EventHandler(TanukiView_ImageFrameChanged));
+            }
         }
 
         /// <summary>
@@ -94,9 +128,19 @@ namespace Tanuki_Chi
                     break;
                 }
 
-                if (view.BackgroundImage == null)
+                if (bolTranceparentMode)
                 {
-                    continue;
+                    if (view.BackgroundImage == null)
+                    {
+                        continue;
+                    }
+                }
+                else
+                {
+                    if (view.pictureBoxTanuki.Image == null)
+                    {
+                        continue;
+                    }
                 }
 
                 Rectangle viewRectangle = view.tanukiRectangle;
@@ -126,7 +170,14 @@ namespace Tanuki_Chi
         /// <param name="e"></param>
         private void TanukiView_Paint(object sender, PaintEventArgs e)
         {
-            ImageAnimator.UpdateFrames(BackgroundImage);
+            if (bolTranceparentMode)
+            {
+                ImageAnimator.UpdateFrames(BackgroundImage);
+            }
+            else
+            {
+                ImageAnimator.UpdateFrames(pictureBoxTanuki.Image);
+            }
         }
 
         /// <summary>
@@ -143,10 +194,21 @@ namespace Tanuki_Chi
                 return;
             }
 
-            BackgroundImage.Dispose();
-            Image image = model.Command("MouseDown");
-            setHeightPostion(image);
-            TanukiView_SetBackgroundImage(image);
+            if (bolTranceparentMode)
+            {
+                BackgroundImage.Dispose();
+                Image image = model.Command("MouseDown");
+                setHeightPostion(image);
+                TanukiView_SetBackgroundImage(image);
+            }
+            else
+            {
+                pictureBoxTanuki.Image.Dispose();
+                Image image = model.Command("MouseDown");
+                setHeightPostion(image);
+                TanukiView_SetBackgroundImage(image);
+            }
+
             timerMouseDown.Start();
         }
 
@@ -165,7 +227,7 @@ namespace Tanuki_Chi
         }
 
         /// <summary>
-        /// マウス押下時間切れ
+        /// 時間切れ
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -173,31 +235,27 @@ namespace Tanuki_Chi
         {
             timerMouseDown.Stop();
 
-            BackgroundImage.Dispose();
-            Image image = model.Command("");
-            setHeightPostion(image);
-            TanukiView_SetBackgroundImage(image);
-        }
-
-        private void TanukiView_DragDrop(object sender, DragEventArgs e)
-        {
-            if (timerMouseDown.Enabled)
+            if (bolTranceparentMode)
             {
-                timerMouseDown.Stop();
-                timerMouseDown.Start();
-                return;
+                BackgroundImage.Dispose();
+                Image image = model.Command("");
+                setHeightPostion(image);
+                TanukiView_SetBackgroundImage(image);
             }
-
-            ListViewItem srcItem = (ListViewItem)e.Data.GetData(typeof(ListViewItem));
-            int index = srcItem.ImageIndex;
-
-            BackgroundImage.Dispose();
-            Image image = model.Command("Put:" + index.ToString());
-            setHeightPostion(image);
-            TanukiView_SetBackgroundImage(image);
-            timerMouseDown.Start();
+            else
+            {
+                pictureBoxTanuki.Image.Dispose();
+                Image image = model.Command("");
+                setHeightPostion(image);
+                TanukiView_SetBackgroundImage(image);
+            }
         }
 
+        /// <summary>
+        /// ドラッグ＆ドロップ開始
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TanukiView_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data == null)
@@ -205,10 +263,56 @@ namespace Tanuki_Chi
                 return;
             }
 
+            // ドラッグ＆ドロップ対象がListViewItemの場合に許可する。
             if ((e.Data.GetDataPresent(typeof(ListViewItem))))
             {
                 e.Effect = DragDropEffects.Copy;
             }
+        }
+
+        /// <summary>
+        /// ドラッグ＆ドロップ
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TanukiView_DragDrop(object sender, DragEventArgs e)
+        {
+            // ドラッグ＆ドロップ対象がListViewItemの場合
+            if ((e.Data.GetDataPresent(typeof(ListViewItem))))
+            {
+                if (timerMouseDown.Enabled)
+                {
+                    timerMouseDown.Stop();
+                    timerMouseDown.Start();
+                    return;
+                }
+
+                ListViewItem srcItem = (ListViewItem)e.Data.GetData(typeof(ListViewItem));
+                // 後日アイテム名に変更する。
+                int index = srcItem.ImageIndex;
+
+                if (bolTranceparentMode)
+                {
+                    BackgroundImage.Dispose();
+                    Image image = model.Command("Put:" + index.ToString());
+                    setHeightPostion(image);
+                    TanukiView_SetBackgroundImage(image);
+                    timerMouseDown.Start();
+                }
+                else
+                {
+                    pictureBoxTanuki.Image.Dispose();
+                    Image image = model.Command("Put:" + index.ToString());
+                    setHeightPostion(image);
+                    TanukiView_SetBackgroundImage(image);
+                    timerMouseDown.Start();
+                }
+            }
+        }
+
+        private void TanukiView_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
         }
     }
 }

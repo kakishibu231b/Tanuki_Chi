@@ -22,6 +22,11 @@ namespace Tanuki_Chi
 
         }
 
+        /// <summary>
+        /// ドラッグ＆ドロップ開始
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void listViewTanukiItem_ItemDrag(object sender, ItemDragEventArgs e)
         {
             if (e.Item == null)
@@ -29,6 +34,7 @@ namespace Tanuki_Chi
                 return;
             }
 
+            // ドラッグ＆ドロップ先はたぬきとする。
             ListViewItem listViewItem = e.Item as ListViewItem;
             TanukiController tanukiController = Owner as TanukiController;
             foreach (TanukiView tanukiView in tanukiController.tanukiViews)

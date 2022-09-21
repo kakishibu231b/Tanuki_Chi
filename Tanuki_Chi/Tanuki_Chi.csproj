@@ -145,6 +145,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Background\room_yuka_tatami.png" />
     <Content Include="Resources\OjuChosan\OjuChosan_Dance_Smiling.gif" />
     <Content Include="Resources\OjuChosan\OjuChosan_Front_WaistSwing.gif" />
     <Content Include="Resources\HayakawaTazuna\HayakawaTazuna_Smiling.gif" />

@@ -1,5 +1,6 @@
 ﻿using System.Drawing.Imaging;
 using System.Drawing;
+using System.Collections.Generic;
 
 namespace Tanuki_Chi
 {
