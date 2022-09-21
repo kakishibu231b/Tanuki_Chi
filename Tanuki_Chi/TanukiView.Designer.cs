@@ -39,6 +39,7 @@
             // 
             // TanukiView
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
@@ -54,6 +55,8 @@
             this.Text = "TanukiView";
             this.TransparencyKey = System.Drawing.SystemColors.Control;
             this.Load += new System.EventHandler(this.TanukiView_Load);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.TanukiView_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.TanukiView_DragEnter);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.TanukiView_Paint);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TanukiView_MouseDown);
             this.ResumeLayout(false);

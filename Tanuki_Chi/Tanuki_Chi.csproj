@@ -71,6 +71,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TanukiItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TanukiItem.Designer.cs">
+      <DependentUpon>TanukiItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="TankiModel\ElCondorPasa.cs" />
     <Compile Include="TankiModel\GoldShip.cs" />
     <Compile Include="TankiModel\GrassWonder.cs" />
@@ -119,6 +125,9 @@
     <EmbeddedResource Include="TanukiController.resx">
       <DependentUpon>TanukiController.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TanukiItem.resx">
+      <DependentUpon>TanukiItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TanukiView.resx">
       <DependentUpon>TanukiView.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,10 +156,12 @@
     <Content Include="Resources\GoldShip\GoldShip_Front_Smiling.gif" />
     <Content Include="Resources\SilenceSuzuka\SilenceSuzuka_Dance_Sing.gif" />
     <Content Include="Resources\SiriusSymboli\SiriusSymboli_Front_Smiling.gif" />
+    <Content Include="Resources\SpecialWeek\SpecialWeek_Dance_EatRice.gif" />
     <Content Include="Resources\SymboliRudolf\SymboliRudolf_Front_Smiling.gif" />
     <Content Include="Resources\SpecialWeek\SpecialWeek_Dance_Smiling.gif" />
     <Content Include="Resources\SmartFalcon\SmartFalcon_Dance_Sing.gif" />
     <Content Include="Resources\SeiunSky\SeiunSky_Dance_Smiling.gif" />
+    <Content Include="Resources\TanukiItem\Rice.png" />
     <Content Include="Resources\TwinTurbo\TwinTurbo_Dance_HighSpirits.gif" />
     <Content Include="Resources\TsurumaruTsuyoshi\TsurumaruTsuyoshi_Dance_Smiling.gif" />
     <Content Include="Resources\TokaiTeio\TokaiTeio_Front_Smiling.gif" />

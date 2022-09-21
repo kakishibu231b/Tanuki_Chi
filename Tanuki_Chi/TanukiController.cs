@@ -34,14 +34,14 @@ namespace Tanuki_Chi
         {
             Application.Idle += new EventHandler(Tanuki_Idle);
 
-            tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
-            tanukiViews.Add(new TanukiView(new OjuChosan(), this));
+            //tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
+            //tanukiViews.Add(new TanukiView(new OjuChosan(), this));
 
             //tanukiViews.Add(new TanukiView(new ElCondorPasa(), this));
             //tanukiViews.Add(new TanukiView(new GrassWonder(), this));
             //tanukiViews.Add(new TanukiView(new KingHalo(), this));
             //tanukiViews.Add(new TanukiView(new SeiunSky(), this));
-            //tanukiViews.Add(new TanukiView(new SpecialWeek(), this));
+            tanukiViews.Add(new TanukiView(new SpecialWeek(), this));
             //tanukiViews.Add(new TanukiView(new TsurumaruTsuyoshi(), this));
 
             //tanukiViews.Add(new TanukiView(new InesFujin(), this));
@@ -60,6 +60,10 @@ namespace Tanuki_Chi
             {
                 view.Show(this);
             }
+
+            TanukiItem tanukiItem = new TanukiItem();
+            tanukiItem.Location = new Point(1024,768);
+            tanukiItem.Show(this);
         }
 
         /// <summary>

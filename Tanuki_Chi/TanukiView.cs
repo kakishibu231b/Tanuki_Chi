@@ -178,5 +178,37 @@ namespace Tanuki_Chi
             setHeightPostion(image);
             TanukiView_SetBackgroundImage(image);
         }
+
+        private void TanukiView_DragDrop(object sender, DragEventArgs e)
+        {
+            if (timerMouseDown.Enabled)
+            {
+                timerMouseDown.Stop();
+                timerMouseDown.Start();
+                return;
+            }
+
+            ListViewItem srcItem = (ListViewItem)e.Data.GetData(typeof(ListViewItem));
+            int index = srcItem.ImageIndex;
+
+            BackgroundImage.Dispose();
+            Image image = model.Command("Put:" + index.ToString());
+            setHeightPostion(image);
+            TanukiView_SetBackgroundImage(image);
+            timerMouseDown.Start();
+        }
+
+        private void TanukiView_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data == null)
+            {
+                return;
+            }
+
+            if ((e.Data.GetDataPresent(typeof(ListViewItem))))
+            {
+                e.Effect = DragDropEffects.Copy;
+            }
+        }
     }
 }

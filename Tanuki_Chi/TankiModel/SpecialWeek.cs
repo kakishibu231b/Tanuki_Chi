@@ -34,6 +34,15 @@ namespace Tanuki_Chi
 
             }
 
+            if (command == "Put:0")
+            {
+                if (CurrentImage != "SpecialWeek_Dance_EatRice")
+                {
+                    CurrentImage = "SpecialWeek_Dance_EatRice";
+                    image = Properties.Resources.SpecialWeek_Dance_EatRice;
+                }
+            }
+
             if (image == null)
             {
                 CurrentImage = "";
