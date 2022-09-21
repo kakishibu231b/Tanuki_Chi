@@ -9,7 +9,7 @@ namespace Tanuki_Chi
         public TanukiModel model;
 
         /// <summary>
-        /// 
+        /// コンストラクタ
         /// </summary>
         private TanukiView()
         {
@@ -17,7 +17,7 @@ namespace Tanuki_Chi
         }
 
         /// <summary>
-        /// 
+        /// コンストラクタ
         /// </summary>
         public TanukiView(TanukiModel model, Form owner)
         {
@@ -32,7 +32,7 @@ namespace Tanuki_Chi
         public Rectangle tanukiRectangle;
         
         /// <summary>
-        /// 
+        /// 起動
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -52,7 +52,7 @@ namespace Tanuki_Chi
         }
 
         /// <summary>
-        /// 
+        /// 背景画像設定
         /// </summary>
         /// <param name="image"></param>
         public void TanukiView_SetBackgroundImage(Image image)
@@ -110,7 +110,7 @@ namespace Tanuki_Chi
         }
 
         /// <summary>
-        /// 
+        /// フレーム更新
         /// </summary>
         /// <param name="o"></param>
         /// <param name="e"></param>
@@ -120,7 +120,7 @@ namespace Tanuki_Chi
         }
 
         /// <summary>
-        /// 
+        /// 再描画
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -130,7 +130,7 @@ namespace Tanuki_Chi
         }
 
         /// <summary>
-        /// 
+        /// マウス押下
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -151,7 +151,7 @@ namespace Tanuki_Chi
         }
 
         /// <summary>
-        /// 高さ位置調整
+        /// 高さ位置設定
         /// </summary>
         /// <param name="image"></param>
         /// <returns></returns>
@@ -165,7 +165,7 @@ namespace Tanuki_Chi
         }
 
         /// <summary>
-        /// 
+        /// マウス押下時間切れ
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
