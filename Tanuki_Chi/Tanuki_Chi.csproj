@@ -94,7 +94,7 @@
     <Compile Include="TankiModel\SpecialWeek.cs" />
     <Compile Include="TankiModel\SymboliRudolf.cs" />
     <Compile Include="TanukiCommon.cs" />
-    <Compile Include="TankiModel\TanukiModel.cs" />
+    <Compile Include="TanukiModel.cs" />
     <Compile Include="TanukiController.cs">
       <SubType>Form</SubType>
     </Compile>
