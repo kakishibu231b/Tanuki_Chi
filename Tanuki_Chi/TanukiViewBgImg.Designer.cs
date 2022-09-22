@@ -29,8 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("", 0);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TanukiViewBgImg));
             this.timerMouseDown = new System.Windows.Forms.Timer(this.components);
             this.pictureBoxTanuki = new System.Windows.Forms.PictureBox();
+            this.listViewTanukiItem = new System.Windows.Forms.ListView();
+            this.imageListTanukiItem = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTanuki)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,6 +56,30 @@
             this.pictureBoxTanuki.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBoxTanuki_MouseDown);
             this.pictureBoxTanuki.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxTanuki_MouseMove);
             // 
+            // listViewTanukiItem
+            // 
+            this.listViewTanukiItem.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.listViewTanukiItem.HideSelection = false;
+            this.listViewTanukiItem.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
+            this.listViewTanukiItem.LargeImageList = this.imageListTanukiItem;
+            this.listViewTanukiItem.Location = new System.Drawing.Point(0, 300);
+            this.listViewTanukiItem.Name = "listViewTanukiItem";
+            this.listViewTanukiItem.Size = new System.Drawing.Size(500, 200);
+            this.listViewTanukiItem.SmallImageList = this.imageListTanukiItem;
+            this.listViewTanukiItem.TabIndex = 1;
+            this.listViewTanukiItem.UseCompatibleStateImageBehavior = false;
+            this.listViewTanukiItem.Visible = false;
+            this.listViewTanukiItem.DoubleClick += new System.EventHandler(this.listViewTanukiItem_DoubleClick);
+            this.listViewTanukiItem.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewTanukiItem_MouseDoubleClick);
+            this.listViewTanukiItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listViewTanukiItem_MouseDown);
+            // 
+            // imageListTanukiItem
+            // 
+            this.imageListTanukiItem.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListTanukiItem.ImageStream")));
+            this.imageListTanukiItem.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListTanukiItem.Images.SetKeyName(0, "Rice.png");
+            // 
             // TanukiViewBgImg
             // 
             this.AllowDrop = true;
@@ -60,6 +88,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(500, 500);
+            this.Controls.Add(this.listViewTanukiItem);
             this.Controls.Add(this.pictureBoxTanuki);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -67,7 +96,7 @@
             this.MinimizeBox = false;
             this.Name = "TanukiViewBgImg";
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TanukiView";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TanukiView_FormClosed);
             this.Load += new System.EventHandler(this.TanukiView_Load);
@@ -83,5 +112,7 @@
 
         private System.Windows.Forms.Timer timerMouseDown;
         public System.Windows.Forms.PictureBox pictureBoxTanuki;
+        private System.Windows.Forms.ListView listViewTanukiItem;
+        private System.Windows.Forms.ImageList imageListTanukiItem;
     }
 }

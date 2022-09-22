@@ -153,6 +153,23 @@ namespace Tanuki_Chi
             {
                 pointMoseDown = e.Location;
             }
+            if ((e.Button & MouseButtons.Right) == MouseButtons.Right)
+            {
+                listViewTanukiItem.Visible = !listViewTanukiItem.Visible;
+            }
+        }
+
+        /// <summary>
+        /// マウス押下
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void listViewTanukiItem_MouseDown(object sender, MouseEventArgs e)
+        {
+            if ((e.Button & MouseButtons.Right) == MouseButtons.Right)
+            {
+                listViewTanukiItem.Visible = !listViewTanukiItem.Visible;
+            }
         }
 
         /// <summary>
@@ -167,6 +184,37 @@ namespace Tanuki_Chi
                 Left += e.X - pointMoseDown.X;
                 Top += e.Y - pointMoseDown.Y;
             }
+        }
+
+        /// <summary>
+        /// アイテムダブルクリック
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void listViewTanukiItem_DoubleClick(object sender, EventArgs e)
+        {
+        }
+
+        private void listViewTanukiItem_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (timerMouseDown.Enabled)
+            {
+                timerMouseDown.Stop();
+                timerMouseDown.Start();
+                return;
+            }
+
+            ListView listView = sender as ListView;
+            ListViewItem srcItem = listView.SelectedItems[0];
+
+            // 後日アイテム名に変更する。
+            int index = srcItem.ImageIndex;
+
+            pictureBoxTanuki.Image.Dispose();
+            Image image = model.Command("Put:" + index.ToString());
+            TanukiView_SetpictureBoxTanukiImage(image);
+            timerMouseDown.Start();
+            listViewTanukiItem.Visible = !listViewTanukiItem.Visible;
         }
     }
 }

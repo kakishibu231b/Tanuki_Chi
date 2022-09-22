@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("", 0);
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("", 0);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TanukiItem));
             this.listViewTanukiItem = new System.Windows.Forms.ListView();
             this.imageListTanukiItem = new System.Windows.Forms.ImageList(this.components);
@@ -40,7 +40,7 @@
             this.listViewTanukiItem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewTanukiItem.HideSelection = false;
             this.listViewTanukiItem.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.listViewTanukiItem.LargeImageList = this.imageListTanukiItem;
             this.listViewTanukiItem.Location = new System.Drawing.Point(0, 0);
             this.listViewTanukiItem.Name = "listViewTanukiItem";
@@ -72,8 +72,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView listViewTanukiItem;
         private System.Windows.Forms.ImageList imageListTanukiItem;
+        public System.Windows.Forms.ListView listViewTanukiItem;
     }
 }
