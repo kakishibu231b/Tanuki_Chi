@@ -9,7 +9,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        private TanukiViewNoBgImg()
+        private TanukiViewNoBgImg() : base()
         {
             InitializeComponent();
         }
@@ -17,15 +17,15 @@ namespace Tanuki_Chi
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        public TanukiViewNoBgImg(TanukiModel model, Form owner)
+        /// <param name="model"></param>
+        /// <param name="owner"></param>
+        public TanukiViewNoBgImg(TanukiModel model, Form owner) : base(model, owner)
         {
             InitializeComponent();
-            this.model = model;
-            this.Owner = owner;
         }
         
         /// <summary>
-        /// 起動
+        /// たぬき表示開始
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -42,6 +42,42 @@ namespace Tanuki_Chi
 
             // 背景設定
             TanukiView_SetBackgroundImage(image);
+        }
+
+        /// <summary>
+        /// 初期位置取得
+        /// </summary>
+        /// <param name="image"></param>
+        /// <returns></returns>
+        public Point getInitLocation(Rectangle rectangle)
+        {
+            int screen_width = Screen.PrimaryScreen.WorkingArea.Width;
+            int screen_height = Screen.PrimaryScreen.WorkingArea.Height;
+
+            // マージン10pixel
+            Point point = new Point(screen_width - rectangle.Right - 10, screen_height - rectangle.Bottom);
+
+            TanukiController tanukiController = Owner as TanukiController;
+            foreach (TanukiView view in tanukiController.tanukiViews)
+            {
+                if (view == this)
+                {
+                    break;
+                }
+
+                if (view.BackgroundImage == null)
+                {
+                    continue;
+                }
+
+                Rectangle viewRectangle = view.tanukiRectangle;
+                if (viewRectangle == null)
+                {
+                    continue;
+                }
+                point.X -= viewRectangle.Width;
+            }
+            return point;
         }
 
         /// <summary>
@@ -63,53 +99,7 @@ namespace Tanuki_Chi
             BackgroundImage = image;
 
             // アニメーション設定
-            ImageAnimator.Animate(BackgroundImage, new EventHandler(TanukiView_ImageFrameChanged));
-        }
-
-        /// <summary>
-        /// 初期位置取得
-        /// </summary>
-        /// <param name="image"></param>
-        /// <returns></returns>
-        public Point getInitLocation(Rectangle rectangle)
-        {
-            int screen_width = Screen.PrimaryScreen.WorkingArea.Width;
-            int screen_height = Screen.PrimaryScreen.WorkingArea.Height;
-
-            // マージン10pixel
-            Point point = new Point(screen_width - rectangle.Right - 10, screen_height - rectangle.Bottom);
-
-            TanukiController tanukiController = Owner as TanukiController;
-            foreach (TanukiView view in tanukiController.tanukiViews)
-            {
-                //if (view == this)
-                //{
-                //    break;
-                //}
-
-                if (view.BackgroundImage == null)
-                {
-                    continue;
-                }
-
-                Rectangle viewRectangle = view.tanukiRectangle;
-                if (viewRectangle == null)
-                {
-                    continue;
-                }
-                point.X -= viewRectangle.Width;
-            }
-            return point;
-        }
-
-        /// <summary>
-        /// フレーム更新
-        /// </summary>
-        /// <param name="o"></param>
-        /// <param name="e"></param>
-        private void TanukiView_ImageFrameChanged(object o, EventArgs e)
-        {
-            Invalidate();
+            ImageAnimator.Animate(image, new EventHandler(base.TanukiView_ImageFrameChanged));
         }
 
         /// <summary>
@@ -119,7 +109,7 @@ namespace Tanuki_Chi
         /// <param name="e"></param>
         private void TanukiView_Paint(object sender, PaintEventArgs e)
         {
-            ImageAnimator.UpdateFrames(BackgroundImage);
+            base.TanukiView_Paint(sender, e, BackgroundImage);
         }
 
         /// <summary>
@@ -221,6 +211,11 @@ namespace Tanuki_Chi
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TanukiView_FormClosed(object sender, FormClosedEventArgs e)
         {
 

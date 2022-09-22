@@ -48,8 +48,9 @@
             this.pictureBoxTanuki.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxTanuki.TabIndex = 0;
             this.pictureBoxTanuki.TabStop = false;
+            this.pictureBoxTanuki.Click += new System.EventHandler(this.pictureBoxTanuki_Click);
             // 
-            // TanukiView
+            // TanukiViewBgImg
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -62,7 +63,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "TanukiView";
+            this.Name = "TanukiViewBgImg";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "TanukiView";
@@ -71,7 +72,6 @@
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.TanukiView_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.TanukiView_DragEnter);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.TanukiView_Paint);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TanukiView_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTanuki)).EndInit();
             this.ResumeLayout(false);
 
