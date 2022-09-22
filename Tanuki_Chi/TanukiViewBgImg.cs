@@ -4,12 +4,12 @@ using System.Windows.Forms;
 
 namespace Tanuki_Chi
 {
-    public partial class TanukiViewNoBgImg : TanukiView
+    public partial class TanukiViewBgImg : TanukiView
     {
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        private TanukiViewNoBgImg()
+        private TanukiViewBgImg()
         {
             InitializeComponent();
         }
@@ -17,11 +17,21 @@ namespace Tanuki_Chi
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        public TanukiViewNoBgImg(TanukiModel model, Form owner)
+        public TanukiViewBgImg(TanukiModel model, Form owner)
         {
             InitializeComponent();
             this.model = model;
             this.Owner = owner;
+
+            // 境界取得
+            Rectangle rectangle = TanukiCommon.getImageBorder(Properties.Resources.room_yuka_tatami);
+            rectangle = new Rectangle(rectangle.X + 10, rectangle.Y + 10, rectangle.Width - 20, rectangle.Height - 20);
+            Bounds = rectangle;
+
+            Bitmap bitmap = new Bitmap(Width, Height);
+            Graphics g = Graphics.FromImage(bitmap);
+            g.DrawImageUnscaled(Properties.Resources.room_yuka_tatami, 0 - rectangle.Left, 0 - rectangle.Top, rectangle.Width, rectangle.Height);
+            pictureBoxTanuki.BackgroundImage = bitmap;
         }
         
         /// <summary>
@@ -37,9 +47,6 @@ namespace Tanuki_Chi
             // 境界取得
             tanukiRectangle = TanukiCommon.getImageBorder(image);
 
-            // 初期位置取得
-            Location = getInitLocation(tanukiRectangle);
-
             // 背景設定
             TanukiView_SetBackgroundImage(image);
         }
@@ -50,20 +57,16 @@ namespace Tanuki_Chi
         /// <param name="image"></param>
         public void TanukiView_SetBackgroundImage(Image image)
         {
-            if (BackgroundImage != null && BackgroundImage.Equals(image))
+            if (pictureBoxTanuki != null && pictureBoxTanuki.Equals(image))
             {
                 return;
             }
 
-            // サイズは初期表示画像を基に決定する。
-            Height = image.Height;
-            Width = image.Width;
-
             // 初期表示画像を貼り付ける。
-            BackgroundImage = image;
+            pictureBoxTanuki.Image = image;
 
             // アニメーション設定
-            ImageAnimator.Animate(BackgroundImage, new EventHandler(TanukiView_ImageFrameChanged));
+            ImageAnimator.Animate(pictureBoxTanuki.Image, new EventHandler(TanukiView_ImageFrameChanged));
         }
 
         /// <summary>
@@ -80,14 +83,14 @@ namespace Tanuki_Chi
             Point point = new Point(screen_width - rectangle.Right - 10, screen_height - rectangle.Bottom);
 
             TanukiController tanukiController = Owner as TanukiController;
-            foreach (TanukiView view in tanukiController.tanukiViews)
+            foreach (TanukiViewBgImg view in tanukiController.tanukiViews)
             {
-                //if (view == this)
-                //{
-                //    break;
-                //}
+                if (view == this)
+                {
+                    break;
+                }
 
-                if (view.BackgroundImage == null)
+                if (view.pictureBoxTanuki.Image == null)
                 {
                     continue;
                 }
@@ -119,7 +122,7 @@ namespace Tanuki_Chi
         /// <param name="e"></param>
         private void TanukiView_Paint(object sender, PaintEventArgs e)
         {
-            ImageAnimator.UpdateFrames(BackgroundImage);
+            ImageAnimator.UpdateFrames(pictureBoxTanuki.Image);
         }
 
         /// <summary>
@@ -136,7 +139,7 @@ namespace Tanuki_Chi
                 return;
             }
 
-            BackgroundImage.Dispose();
+            pictureBoxTanuki.Image.Dispose();
             Image image = model.Command("MouseDown");
             setHeightPostion(image);
             TanukiView_SetBackgroundImage(image);
@@ -167,7 +170,7 @@ namespace Tanuki_Chi
         {
             timerMouseDown.Stop();
 
-            BackgroundImage.Dispose();
+            pictureBoxTanuki.Image.Dispose();
             Image image = model.Command("");
             setHeightPostion(image);
             TanukiView_SetBackgroundImage(image);
@@ -213,7 +216,7 @@ namespace Tanuki_Chi
                 // 後日アイテム名に変更する。
                 int index = srcItem.ImageIndex;
 
-                BackgroundImage.Dispose();
+                pictureBoxTanuki.Image.Dispose();
                 Image image = model.Command("Put:" + index.ToString());
                 setHeightPostion(image);
                 TanukiView_SetBackgroundImage(image);

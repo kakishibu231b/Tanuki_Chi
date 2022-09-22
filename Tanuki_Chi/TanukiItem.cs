@@ -37,7 +37,7 @@ namespace Tanuki_Chi
             // ドラッグ＆ドロップ先はたぬきとする。
             ListViewItem listViewItem = e.Item as ListViewItem;
             TanukiController tanukiController = Owner as TanukiController;
-            foreach (TanukiView tanukiView in tanukiController.tanukiViews)
+            foreach (TanukiViewBgImg tanukiView in tanukiController.tanukiViews)
             {
                 tanukiView.DoDragDrop(listViewItem, DragDropEffects.Copy);
             }

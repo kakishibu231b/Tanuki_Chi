@@ -1,6 +1,6 @@
 ﻿namespace Tanuki_Chi
 {
-    partial class TanukiView
+    partial class TanukiViewBgImg
     {
         /// <summary>
         /// Required designer variable.

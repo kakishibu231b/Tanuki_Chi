@@ -106,8 +106,11 @@
     <Compile Include="TanukiView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TanukiView.Designer.cs">
-      <DependentUpon>TanukiView.cs</DependentUpon>
+    <Compile Include="TanukiViewBgImg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TanukiViewBgImg.Designer.cs">
+      <DependentUpon>TanukiViewBgImg.cs</DependentUpon>
     </Compile>
     <Compile Include="TankiModel\TokaiTeio.cs" />
     <Compile Include="TankiModel\TsurumaruTsuyoshi.cs" />
@@ -134,8 +137,8 @@
     <EmbeddedResource Include="TanukiItem.resx">
       <DependentUpon>TanukiItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TanukiView.resx">
-      <DependentUpon>TanukiView.cs</DependentUpon>
+    <EmbeddedResource Include="TanukiViewBgImg.resx">
+      <DependentUpon>TanukiViewBgImg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TanukiViewNoBgImg.resx">
       <DependentUpon>TanukiViewNoBgImg.cs</DependentUpon>
