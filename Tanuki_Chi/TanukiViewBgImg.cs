@@ -143,7 +143,7 @@ namespace Tanuki_Chi
         Point pointMoseDown;
 
         /// <summary>
-        /// 
+        /// マウス押下
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -156,7 +156,7 @@ namespace Tanuki_Chi
         }
 
         /// <summary>
-        /// 
+        /// マウス移動
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
