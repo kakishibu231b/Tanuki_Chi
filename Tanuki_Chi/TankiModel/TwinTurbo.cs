@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public TwinTurbo() : base("ツインターボ")
+        public TwinTurbo() : base("ツインターボ", "")
         {
 
         }
@@ -36,7 +36,7 @@ namespace Tanuki_Chi
 
             if (image == null)
             {
-                CurrentImage = "";
+                CurrentImageName = "";
                 image = InitImage();
             }
 

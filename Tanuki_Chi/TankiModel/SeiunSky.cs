@@ -7,7 +7,7 @@ namespace Tanuki_Chi
          /// <summary>
         /// 
         /// </summary>
-        public SeiunSky() : base("セイウンスカイ")
+        public SeiunSky() : base("セイウンスカイ", "")
         {
 
         }
@@ -36,7 +36,7 @@ namespace Tanuki_Chi
 
             if (image == null)
             {
-                CurrentImage = "";
+                CurrentImageName = "";
                 image = InitImage();
             }
 

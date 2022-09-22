@@ -4,8 +4,9 @@ namespace Tanuki_Chi
 {
     public abstract class TanukiModel
     {
-        private string name;
-        private string currentImage;
+        private string fullName;
+        private string eponymousName;
+        private string currentImageName;
 
         /// <summary>
         /// 
@@ -18,18 +19,28 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="name"></param>
-        public TanukiModel(string name)
+        /// <param name="fulllname"></param>
+        /// <param name="eponymousName"></param>
+        public TanukiModel(string fulllname, string eponymousName)
         {
-            this.name = name;
+            this.fullName = fulllname;
+            this.eponymousName = eponymousName;
         }
 
         /// <summary>
         /// 
         /// </summary>
-        public string Name
+        public string FullName
         {
-            get { return name; }
+            get { return fullName; }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string EponymousName
+        {
+            get { return eponymousName; }
         }
 
         /// <summary>
@@ -40,10 +51,10 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public string CurrentImage
+        public string CurrentImageName
         {
-            get { return currentImage; }
-            set { currentImage = value; }
+            get { return currentImageName; }
+            set { currentImageName = value; }
         }
 
         /// <summary>

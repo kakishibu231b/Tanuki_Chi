@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public Hatsuratsu() : base("ハツラツ")
+        public Hatsuratsu() : base("ハツラツ", "")
         {
 
         }
@@ -36,7 +36,7 @@ namespace Tanuki_Chi
 
             if (image == null)
             {
-                CurrentImage = "";
+                CurrentImageName = "";
                 image = InitImage();
             }
 

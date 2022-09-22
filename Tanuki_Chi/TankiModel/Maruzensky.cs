@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public Maruzensky() : base("マルゼンスキー")
+        public Maruzensky() : base("マルゼンスキー", "")
         {
 
         }
@@ -36,7 +36,7 @@ namespace Tanuki_Chi
 
             if (image == null)
             {
-                CurrentImage = "";
+                CurrentImageName = "";
                 image = InitImage();
             }
 

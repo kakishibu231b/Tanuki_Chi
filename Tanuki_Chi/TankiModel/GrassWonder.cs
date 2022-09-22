@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public GrassWonder() : base("グラスワンダー")
+        public GrassWonder() : base("グラスワンダー", "")
         {
 
         }
@@ -36,7 +36,7 @@ namespace Tanuki_Chi
 
             if (image == null)
             {
-                CurrentImage = "";
+                CurrentImageName = "";
                 image = InitImage();
             }
 

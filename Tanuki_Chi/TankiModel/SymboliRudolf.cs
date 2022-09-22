@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public SymboliRudolf() : base("シンボリルドルフ")
+        public SymboliRudolf() : base("シンボリルドルフ", "")
         {
 
         }
@@ -36,7 +36,7 @@ namespace Tanuki_Chi
 
             if (image == null)
             {
-                CurrentImage = "";
+                CurrentImageName = "";
                 image = InitImage();
             }
 

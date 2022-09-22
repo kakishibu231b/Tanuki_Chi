@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public SpecialWeek() : base("スペシャルウィーク")
+        public SpecialWeek() : base("スペシャルウィーク", "")
         {
 
         }
@@ -36,16 +36,16 @@ namespace Tanuki_Chi
 
             if (command == "Put:0")
             {
-                if (CurrentImage != "SpecialWeek_Dance_EatRice")
+                if (CurrentImageName != "SpecialWeek_Dance_EatRice")
                 {
-                    CurrentImage = "SpecialWeek_Dance_EatRice";
+                    CurrentImageName = "SpecialWeek_Dance_EatRice";
                     image = Properties.Resources.SpecialWeek_Dance_EatRice;
                 }
             }
 
             if (image == null)
             {
-                CurrentImage = "";
+                CurrentImageName = "";
                 image = InitImage();
             }
 

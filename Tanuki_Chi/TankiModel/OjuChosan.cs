@@ -7,7 +7,7 @@ namespace Tanuki_Chi
         /// <summary>
         /// 
         /// </summary>
-        public OjuChosan() : base("オジュウチョウサン")
+        public OjuChosan() : base("オジュウチョウサン", "")
         {
 
         }
@@ -31,16 +31,16 @@ namespace Tanuki_Chi
 
             if (command == "MouseDown")
             {
-                if (CurrentImage != "OjuChosan_Front_WaistSwing")
+                if (CurrentImageName != "OjuChosan_Front_WaistSwing")
                 {
-                    CurrentImage = "OjuChosan_Front_WaistSwing";
+                    CurrentImageName = "OjuChosan_Front_WaistSwing";
                     image = Properties.Resources.OjuChosan_Front_WaistSwing;
                 }
             }
 
             if(image == null)
             {
-                CurrentImage = "";
+                CurrentImageName = "";
                 image = InitImage();
             }
 
