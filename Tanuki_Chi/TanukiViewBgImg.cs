@@ -23,7 +23,8 @@ namespace Tanuki_Chi
 
             // 境界取得
             Rectangle rectangle = TanukiCommon.getImageBorder(Properties.Resources.room_yuka_tatami);
-            rectangle = new Rectangle(rectangle.X + 10, rectangle.Y + 10, rectangle.Width - 20, rectangle.Height - 20);
+            int intMargin = 10;
+            rectangle = new Rectangle(rectangle.X + intMargin, rectangle.Y + intMargin, rectangle.Width - (intMargin * 2), rectangle.Height - (intMargin * 2));
             Bounds = rectangle;
 
             Bitmap bitmap = new Bitmap(Width, Height);
@@ -89,18 +90,7 @@ namespace Tanuki_Chi
         /// <param name="e"></param>
         private void pictureBoxTanuki_Click(object sender, EventArgs e)
         {
-            if (timerMouseDown.Enabled)
-            {
-                timerMouseDown.Stop();
-                timerMouseDown.Start();
-                return;
-            }
 
-            pictureBoxTanuki.Image.Dispose();
-            Image image = model.Command("MouseDown");
-            TanukiView_SetpictureBoxTanukiImage(image);
-
-            timerMouseDown.Start();
         }
 
         /// <summary>
@@ -145,6 +135,38 @@ namespace Tanuki_Chi
         private void TanukiView_FormClosed(object sender, FormClosedEventArgs e)
         {
 
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Point pointMoseDown;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void pictureBoxTanuki_MouseDown(object sender, MouseEventArgs e)
+        {
+            if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
+            {
+                pointMoseDown = e.Location;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void pictureBoxTanuki_MouseMove(object sender, MouseEventArgs e)
+        {
+            if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
+            {
+                Left += e.X - pointMoseDown.X;
+                Top += e.Y - pointMoseDown.Y;
+            }
         }
     }
 }

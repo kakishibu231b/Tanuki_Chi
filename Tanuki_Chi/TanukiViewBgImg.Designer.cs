@@ -49,6 +49,8 @@
             this.pictureBoxTanuki.TabIndex = 0;
             this.pictureBoxTanuki.TabStop = false;
             this.pictureBoxTanuki.Click += new System.EventHandler(this.pictureBoxTanuki_Click);
+            this.pictureBoxTanuki.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBoxTanuki_MouseDown);
+            this.pictureBoxTanuki.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxTanuki_MouseMove);
             // 
             // TanukiViewBgImg
             // 
