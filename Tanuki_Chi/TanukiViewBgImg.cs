@@ -138,7 +138,7 @@ namespace Tanuki_Chi
         }
 
         /// <summary>
-        /// 
+        /// マウス押下時マウス位置
         /// </summary>
         Point pointMoseDown;
 
