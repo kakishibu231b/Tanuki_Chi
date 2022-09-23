@@ -34,29 +34,29 @@ namespace Tanuki_Chi
         {
             Application.Idle += new EventHandler(Tanuki_Idle);
 
-            //tanukiViews.Add(new TanukiView(new HayakawaTazuna(), this));
-            //tanukiViews.Add(new TanukiView(new OjuChosan(), this));
+            //tanukiViews.Add(new TanukiViewBgImg(new HayakawaTazuna(), this));
+            //tanukiViews.Add(new TanukiViewBgImg(new OjuChosan(), this));
 
-            //tanukiViews.Add(new TanukiView(new ElCondorPasa(), this));
-            //tanukiViews.Add(new TanukiView(new GrassWonder(), this));
-            //tanukiViews.Add(new TanukiView(new KingHalo(), this));
-            //tanukiViews.Add(new TanukiView(new SeiunSky(), this));
-            tanukiViews.Add(new TanukiViewBgImg(new SpecialWeek(), this));
-            tanukiViews.Add(new TanukiViewNoBgImg(new SpecialWeek(), this));
-            //tanukiViews.Add(new TanukiView(new TsurumaruTsuyoshi(), this));
+            //tanukiViews.Add(new TanukiViewBgImg(new ElCondorPasa(), this));
+            //tanukiViews.Add(new TanukiViewBgImg(new GrassWonder(), this));
+            tanukiViews.Add(new TanukiViewBgImg(new KingHalo(), this));
+            //tanukiViews.Add(new TanukiViewBgImg(new SeiunSky(), this));
+            //tanukiViews.Add(new TanukiViewBgImg(new SpecialWeek(), this));
+            //tanukiViews.Add(new TanukiViewNoBgImg(new SpecialWeek(), this));
+            //tanukiViews.Add(new TanukiViewBgImg(new TsurumaruTsuyoshi(), this));
 
-            //tanukiViews.Add(new TanukiView(new InesFujin(), this));
-            //tanukiViews.Add(new TanukiView(new MihonoBourbon(), this));
-            //tanukiViews.Add(new TanukiView(new SilenceSuzuka(), this));
-            //tanukiViews.Add(new TanukiView(new SmartFalcon(), this));
-            //tanukiViews.Add(new TanukiView(new Maruzensky(), this));
+            //tanukiViews.Add(new TanukiViewBgImg(new InesFujin(), this));
+            //tanukiViews.Add(new TanukiViewBgImg(new MihonoBourbon(), this));
+            //tanukiViews.Add(new TanukiViewBgImg(new SilenceSuzuka(), this));
+            //tanukiViews.Add(new TanukiViewBgImg(new SmartFalcon(), this));
+            //tanukiViews.Add(new TanukiViewBgImg(new Maruzensky(), this));
 
-            //tanukiViews.Add(new TanukiView(new SymboliRudolf(), this));
-            //tanukiViews.Add(new TanukiView(new SiriusSymboli(), this));
-            //tanukiViews.Add(new TanukiView(new GoldShip(), this));
-            //tanukiViews.Add(new TanukiView(new Hatsuratsu(), this));
-            //tanukiViews.Add(new TanukiView(new TokaiTeio(), this));
-            //tanukiViews.Add(new TanukiView(new TwinTurbo(), this));
+            //tanukiViews.Add(new TanukiViewBgImg(new SymboliRudolf(), this));
+            //tanukiViews.Add(new TanukiViewBgImg(new SiriusSymboli(), this));
+            //tanukiViews.Add(new TanukiViewBgImg(new GoldShip(), this));
+            //tanukiViews.Add(new TanukiViewBgImg(new Hatsuratsu(), this));
+            //tanukiViews.Add(new TanukiViewBgImg(new TokaiTeio(), this));
+            //tanukiViews.Add(new TanukiViewBgImg(new TwinTurbo(), this));
             foreach (var view in tanukiViews)
             {
                 view.Show(this);

@@ -187,4 +187,7 @@
   <data name="room_yuka_tatami" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\background\room_yuka_tatami.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="KingHalo_Sleep_Smiling" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\kinghalo\kinghalo_sleep_smiling.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

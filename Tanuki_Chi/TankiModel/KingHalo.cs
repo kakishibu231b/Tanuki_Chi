@@ -31,7 +31,15 @@ namespace Tanuki_Chi
 
             if (command == "MouseDown")
             {
+            }
 
+            if (command == "Put:0")
+            {
+                if (CurrentImageName != "KingHalo_Sleep_Smiling")
+                {
+                    CurrentImageName = "KingHalo_Sleep_Smiling";
+                    image = Properties.Resources.KingHalo_Sleep_Smiling;
+                }
             }
 
             if (image == null)
