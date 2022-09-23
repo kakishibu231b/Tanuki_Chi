@@ -38,7 +38,7 @@ namespace Tanuki_Chi
                 }
             }
 
-            if (command == "Put:0")
+            if (command == "Rice")
             {
                 if (CurrentImageName != "SpecialWeek_Dance_EatRice")
                 {

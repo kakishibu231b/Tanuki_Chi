@@ -33,7 +33,7 @@ namespace Tanuki_Chi
             {
             }
 
-            if (command == "Put:0")
+            if (command == "futon")
             {
                 if (CurrentImageName != "KingHalo_Sleep_Smiling")
                 {

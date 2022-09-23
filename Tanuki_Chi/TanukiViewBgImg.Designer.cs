@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("", 0);
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("", "Rice");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("", "futon");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TanukiViewBgImg));
             this.timerMouseDown = new System.Windows.Forms.Timer(this.components);
-            this.pictureBoxTanuki = new System.Windows.Forms.PictureBox();
             this.listViewTanukiItem = new System.Windows.Forms.ListView();
             this.imageListTanukiItem = new System.Windows.Forms.ImageList(this.components);
+            this.pictureBoxTanuki = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTanuki)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,6 +43,34 @@
             // 
             this.timerMouseDown.Interval = 5000;
             this.timerMouseDown.Tick += new System.EventHandler(this.timerMouseDown_Tick);
+            // 
+            // listViewTanukiItem
+            // 
+            this.listViewTanukiItem.BackgroundImage = global::Tanuki_Chi.Properties.Resources.pattern_shibafu;
+            this.listViewTanukiItem.BackgroundImageTiled = true;
+            this.listViewTanukiItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listViewTanukiItem.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.listViewTanukiItem.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1,
+            listViewItem2});
+            this.listViewTanukiItem.LargeImageList = this.imageListTanukiItem;
+            this.listViewTanukiItem.Location = new System.Drawing.Point(0, 315);
+            this.listViewTanukiItem.Name = "listViewTanukiItem";
+            this.listViewTanukiItem.Size = new System.Drawing.Size(500, 185);
+            this.listViewTanukiItem.SmallImageList = this.imageListTanukiItem;
+            this.listViewTanukiItem.TabIndex = 1;
+            this.listViewTanukiItem.UseCompatibleStateImageBehavior = false;
+            this.listViewTanukiItem.Visible = false;
+            this.listViewTanukiItem.DoubleClick += new System.EventHandler(this.listViewTanukiItem_DoubleClick);
+            this.listViewTanukiItem.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewTanukiItem_MouseDoubleClick);
+            this.listViewTanukiItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listViewTanukiItem_MouseDown);
+            // 
+            // imageListTanukiItem
+            // 
+            this.imageListTanukiItem.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListTanukiItem.ImageStream")));
+            this.imageListTanukiItem.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListTanukiItem.Images.SetKeyName(0, "Rice");
+            this.imageListTanukiItem.Images.SetKeyName(1, "futon");
             // 
             // pictureBoxTanuki
             // 
@@ -55,30 +84,6 @@
             this.pictureBoxTanuki.Click += new System.EventHandler(this.pictureBoxTanuki_Click);
             this.pictureBoxTanuki.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBoxTanuki_MouseDown);
             this.pictureBoxTanuki.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxTanuki_MouseMove);
-            // 
-            // listViewTanukiItem
-            // 
-            this.listViewTanukiItem.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.listViewTanukiItem.HideSelection = false;
-            this.listViewTanukiItem.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.listViewTanukiItem.LargeImageList = this.imageListTanukiItem;
-            this.listViewTanukiItem.Location = new System.Drawing.Point(0, 300);
-            this.listViewTanukiItem.Name = "listViewTanukiItem";
-            this.listViewTanukiItem.Size = new System.Drawing.Size(500, 200);
-            this.listViewTanukiItem.SmallImageList = this.imageListTanukiItem;
-            this.listViewTanukiItem.TabIndex = 1;
-            this.listViewTanukiItem.UseCompatibleStateImageBehavior = false;
-            this.listViewTanukiItem.Visible = false;
-            this.listViewTanukiItem.DoubleClick += new System.EventHandler(this.listViewTanukiItem_DoubleClick);
-            this.listViewTanukiItem.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewTanukiItem_MouseDoubleClick);
-            this.listViewTanukiItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listViewTanukiItem_MouseDown);
-            // 
-            // imageListTanukiItem
-            // 
-            this.imageListTanukiItem.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListTanukiItem.ImageStream")));
-            this.imageListTanukiItem.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListTanukiItem.Images.SetKeyName(0, "Rice.png");
             // 
             // TanukiViewBgImg
             // 

@@ -42,7 +42,6 @@ namespace Tanuki_Chi
             tanukiViews.Add(new TanukiViewBgImg(new KingHalo(), this));
             //tanukiViews.Add(new TanukiViewBgImg(new SeiunSky(), this));
             //tanukiViews.Add(new TanukiViewBgImg(new SpecialWeek(), this));
-            //tanukiViews.Add(new TanukiViewNoBgImg(new SpecialWeek(), this));
             //tanukiViews.Add(new TanukiViewBgImg(new TsurumaruTsuyoshi(), this));
 
             //tanukiViews.Add(new TanukiViewBgImg(new InesFujin(), this));

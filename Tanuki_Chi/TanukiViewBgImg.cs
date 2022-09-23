@@ -207,11 +207,10 @@ namespace Tanuki_Chi
             ListView listView = sender as ListView;
             ListViewItem srcItem = listView.SelectedItems[0];
 
-            // 後日アイテム名に変更する。
-            int index = srcItem.ImageIndex;
+            string imageKey = srcItem.ImageKey;
 
             pictureBoxTanuki.Image.Dispose();
-            Image image = model.Command("Put:" + index.ToString());
+            Image image = model.Command(imageKey);
             TanukiView_SetpictureBoxTanukiImage(image);
             timerMouseDown.Start();
             listViewTanukiItem.Visible = !listViewTanukiItem.Visible;
