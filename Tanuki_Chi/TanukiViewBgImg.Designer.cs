@@ -89,7 +89,6 @@
             this.pictureBoxTanuki.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxTanuki.Name = "pictureBoxTanuki";
             this.pictureBoxTanuki.Size = new System.Drawing.Size(500, 500);
-            this.pictureBoxTanuki.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxTanuki.TabIndex = 0;
             this.pictureBoxTanuki.TabStop = false;
             this.pictureBoxTanuki.Click += new System.EventHandler(this.pictureBoxTanuki_Click);
