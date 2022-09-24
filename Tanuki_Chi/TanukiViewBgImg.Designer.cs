@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "おにく"}, "meat", System.Drawing.Color.White, System.Drawing.Color.Empty, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
+            "おにく"}, "Meat", System.Drawing.Color.White, System.Drawing.Color.Empty, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "ごはん"}, "Rice", System.Drawing.Color.White, System.Drawing.SystemColors.Window, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
             System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
-            "ふとん"}, "futon", System.Drawing.Color.White, System.Drawing.Color.Empty, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
+            "ふとん"}, "Futon", System.Drawing.Color.White, System.Drawing.Color.Empty, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TanukiViewBgImg));
             this.timerMouseDown = new System.Windows.Forms.Timer(this.components);
             this.listViewTanukiItem = new System.Windows.Forms.ListView();
@@ -84,8 +84,8 @@
             this.imageListTanukiItem.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListTanukiItem.ImageStream")));
             this.imageListTanukiItem.TransparentColor = System.Drawing.Color.Transparent;
             this.imageListTanukiItem.Images.SetKeyName(0, "Rice");
-            this.imageListTanukiItem.Images.SetKeyName(1, "futon");
-            this.imageListTanukiItem.Images.SetKeyName(2, "meat");
+            this.imageListTanukiItem.Images.SetKeyName(1, "Futon");
+            this.imageListTanukiItem.Images.SetKeyName(2, "Meat");
             // 
             // pictureBoxTanuki
             // 

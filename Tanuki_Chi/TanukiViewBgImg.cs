@@ -319,7 +319,7 @@ namespace Tanuki_Chi
             ListViewItem srcItem = listView.SelectedItems[0];
             string imageKey = srcItem.ImageKey;
 
-            if(imageKey == "futon")
+            if(imageKey == "Futon")
             {
                 guestVisible = false;
             }

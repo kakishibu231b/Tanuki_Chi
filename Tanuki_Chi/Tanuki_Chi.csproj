@@ -71,6 +71,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TankiModel\DaiwaScarlet.cs" />
     <Compile Include="TankiModel\HaruUrara.cs" />
     <Compile Include="TanukiItem.cs">
       <SubType>Form</SubType>
@@ -161,6 +162,8 @@
     <Content Include="Resources\Background\pattern_shibafu.png" />
     <Content Include="Resources\Background\room_yuka_flooring.png" />
     <Content Include="Resources\Background\room_yuka_tatami.png" />
+    <Content Include="Resources\DaiwaScarlet\DaiwaScarlet_Dance_Smiling.gif" />
+    <Content Include="Resources\DaiwaScarlet\DaiwaScarlet_Dance_EatMeat.gif" />
     <Content Include="Resources\HaruUrara\HaruUrara_Dance_Smiling.gif" />
     <Content Include="Resources\KingHalo\KingHalo_Sleep_Smiling.gif" />
     <Content Include="Resources\KingHalo\KingHaloHaruUrara_Sleep_Smiling.gif" />

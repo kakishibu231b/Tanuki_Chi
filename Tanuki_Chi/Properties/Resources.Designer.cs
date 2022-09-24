@@ -63,6 +63,26 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap DaiwaScarlet_Dance_EatMeat {
+            get {
+                object obj = ResourceManager.GetObject("DaiwaScarlet_Dance_EatMeat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap DaiwaScarlet_Dance_Smiling {
+            get {
+                object obj = ResourceManager.GetObject("DaiwaScarlet_Dance_Smiling", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap ElCondorPasa_Dance_Smiling {
             get {
                 object obj = ResourceManager.GetObject("ElCondorPasa_Dance_Smiling", resourceCulture);
