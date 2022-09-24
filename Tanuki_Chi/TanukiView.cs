@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Tanuki_Chi
 {
-    public abstract class TanukiView : Form
+    public class TanukiView : Form
     {
         /// <summary>
         /// 
@@ -65,6 +65,9 @@ namespace Tanuki_Chi
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public abstract void TanukiView_SetGuest(TanukiModel tanukiModel);
+        public virtual void TanukiView_SetGuest(TanukiModel tanukiModel)
+        {
+            ;   
+        }
     }
 }

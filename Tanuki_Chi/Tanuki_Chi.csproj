@@ -182,6 +182,7 @@
     <Content Include="Resources\SeiunSky\SeiunSky_Dance_Smiling.gif" />
     <Content Include="Resources\TanukiItem\futon.png" />
     <Content Include="Resources\TanukiItem\Rice.png" />
+    <Content Include="Resources\TanukiItem\meat.png" />
     <Content Include="Resources\TwinTurbo\TwinTurbo_Dance_HighSpirits.gif" />
     <Content Include="Resources\TsurumaruTsuyoshi\TsurumaruTsuyoshi_Dance_Smiling.gif" />
     <Content Include="Resources\TokaiTeio\TokaiTeio_Front_Smiling.gif" />
