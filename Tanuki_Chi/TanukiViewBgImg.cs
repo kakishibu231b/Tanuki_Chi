@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace Tanuki_Chi
@@ -31,6 +32,10 @@ namespace Tanuki_Chi
             Graphics g = Graphics.FromImage(bitmap);
             g.DrawImageUnscaled(Properties.Resources.room_yuka_tatami, 0 - rectangle.Left, 0 - rectangle.Top, rectangle.Width, rectangle.Height);
             pictureBoxTanuki.BackgroundImage = bitmap;
+
+            // アイテム表示間隔設定
+            ListView_SetIconSpacing(listViewTanukiItem, imageListTanukiItem.ImageSize.Width, imageListTanukiItem.ImageSize.Height);
+            
         }
 
         /// <summary>
@@ -214,6 +219,37 @@ namespace Tanuki_Chi
             TanukiView_SetpictureBoxTanukiImage(image);
             timerMouseDown.Start();
             listViewTanukiItem.Visible = !listViewTanukiItem.Visible;
+        }
+
+        /// <summary>
+        /// アイテム表示間隔設定
+        /// </summary>
+        /// <param name="listview"></param>
+        /// <param name="cx"></param>
+        /// <param name="cy"></param>
+        public void ListView_SetIconSpacing(ListView listview, int cx, int cy)
+        {
+            const int LVM_FIRST = 0x1000;
+            const int LVM_SETICONSPACING = LVM_FIRST + 53;
+            int lParam = cy << 16 | cx;
+
+            IntPtr result = SendMessage(
+                new HandleRef(listview, listview.Handle),
+                LVM_SETICONSPACING,
+                IntPtr.Zero,
+                (IntPtr)lParam);
+
+            // 設定前の値
+            int previousX = (int)result & 0x0000FFFF;
+            int previousY = (int)result >> 16;
+        }
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        public static extern IntPtr SendMessage(HandleRef hWnd, int msg, IntPtr wParam, IntPtr lParam);
+
+        private void pictureBoxTanuki_DoubleClick(object sender, EventArgs e)
+        {
+
         }
     }
 }

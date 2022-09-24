@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("", "Rice");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("", "futon");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            "ごはん"}, "Rice", System.Drawing.Color.White, System.Drawing.SystemColors.Window, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            "ふとん"}, "futon", System.Drawing.Color.White, System.Drawing.Color.Empty, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TanukiViewBgImg));
             this.timerMouseDown = new System.Windows.Forms.Timer(this.components);
             this.listViewTanukiItem = new System.Windows.Forms.ListView();
@@ -46,19 +48,28 @@
             // 
             // listViewTanukiItem
             // 
+            this.listViewTanukiItem.AutoArrange = false;
+            this.listViewTanukiItem.BackColor = System.Drawing.SystemColors.Control;
             this.listViewTanukiItem.BackgroundImage = global::Tanuki_Chi.Properties.Resources.pattern_shibafu;
             this.listViewTanukiItem.BackgroundImageTiled = true;
             this.listViewTanukiItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listViewTanukiItem.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.listViewTanukiItem.HideSelection = false;
+            listViewItem1.StateImageIndex = 0;
+            listViewItem2.StateImageIndex = 0;
             this.listViewTanukiItem.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1,
             listViewItem2});
+            this.listViewTanukiItem.LabelWrap = false;
             this.listViewTanukiItem.LargeImageList = this.imageListTanukiItem;
             this.listViewTanukiItem.Location = new System.Drawing.Point(0, 315);
+            this.listViewTanukiItem.MultiSelect = false;
             this.listViewTanukiItem.Name = "listViewTanukiItem";
             this.listViewTanukiItem.Size = new System.Drawing.Size(500, 185);
             this.listViewTanukiItem.SmallImageList = this.imageListTanukiItem;
+            this.listViewTanukiItem.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listViewTanukiItem.TabIndex = 1;
+            this.listViewTanukiItem.TileSize = new System.Drawing.Size(100, 100);
             this.listViewTanukiItem.UseCompatibleStateImageBehavior = false;
             this.listViewTanukiItem.Visible = false;
             this.listViewTanukiItem.DoubleClick += new System.EventHandler(this.listViewTanukiItem_DoubleClick);
@@ -82,6 +93,7 @@
             this.pictureBoxTanuki.TabIndex = 0;
             this.pictureBoxTanuki.TabStop = false;
             this.pictureBoxTanuki.Click += new System.EventHandler(this.pictureBoxTanuki_Click);
+            this.pictureBoxTanuki.DoubleClick += new System.EventHandler(this.pictureBoxTanuki_DoubleClick);
             this.pictureBoxTanuki.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBoxTanuki_MouseDown);
             this.pictureBoxTanuki.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxTanuki_MouseMove);
             // 
