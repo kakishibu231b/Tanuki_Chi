@@ -30,8 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "ごはん"}, "Rice", System.Drawing.Color.White, System.Drawing.SystemColors.Window, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
+            "おにく"}, "meat", System.Drawing.Color.White, System.Drawing.Color.Empty, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            "ごはん"}, "Rice", System.Drawing.Color.White, System.Drawing.SystemColors.Window, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "ふとん"}, "futon", System.Drawing.Color.White, System.Drawing.Color.Empty, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TanukiViewBgImg));
             this.timerMouseDown = new System.Windows.Forms.Timer(this.components);
@@ -55,11 +57,12 @@
             this.listViewTanukiItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listViewTanukiItem.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.listViewTanukiItem.HideSelection = false;
-            listViewItem1.StateImageIndex = 0;
             listViewItem2.StateImageIndex = 0;
+            listViewItem3.StateImageIndex = 0;
             this.listViewTanukiItem.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1,
-            listViewItem2});
+            listViewItem2,
+            listViewItem3});
             this.listViewTanukiItem.LabelWrap = false;
             this.listViewTanukiItem.LargeImageList = this.imageListTanukiItem;
             this.listViewTanukiItem.Location = new System.Drawing.Point(0, 315);
@@ -82,6 +85,7 @@
             this.imageListTanukiItem.TransparentColor = System.Drawing.Color.Transparent;
             this.imageListTanukiItem.Images.SetKeyName(0, "Rice");
             this.imageListTanukiItem.Images.SetKeyName(1, "futon");
+            this.imageListTanukiItem.Images.SetKeyName(2, "meat");
             // 
             // pictureBoxTanuki
             // 
