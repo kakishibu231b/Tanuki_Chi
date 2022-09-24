@@ -223,6 +223,16 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap room_yuka_flooring {
+            get {
+                object obj = ResourceManager.GetObject("room_yuka_flooring", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap room_yuka_tatami {
             get {
                 object obj = ResourceManager.GetObject("room_yuka_tatami", resourceCulture);

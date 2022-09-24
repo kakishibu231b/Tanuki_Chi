@@ -159,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Background\pattern_shibafu.png" />
+    <Content Include="Resources\Background\room_yuka_flooring.png" />
     <Content Include="Resources\Background\room_yuka_tatami.png" />
     <Content Include="Resources\HaruUrara\HaruUrara_Dance_Smiling.gif" />
     <Content Include="Resources\KingHalo\KingHalo_Sleep_Smiling.gif" />
