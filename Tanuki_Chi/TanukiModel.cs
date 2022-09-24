@@ -7,6 +7,7 @@ namespace Tanuki_Chi
         private string fullName;
         private string eponymousName;
         private string currentImageName;
+        private string guestName;
 
         /// <summary>
         /// 
@@ -55,6 +56,15 @@ namespace Tanuki_Chi
         {
             get { return currentImageName; }
             set { currentImageName = value; }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string GuestName
+        {
+            get { return guestName; }
+            set { guestName = value; }
         }
 
         /// <summary>

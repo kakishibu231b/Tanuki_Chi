@@ -10,6 +10,7 @@ namespace Tanuki_Chi
     {
         Image imageHost;
         Image imageGuest;
+        bool guestVisible = false;
 
         /// <summary>
         /// コンストラクタ
@@ -39,7 +40,36 @@ namespace Tanuki_Chi
 
             // アイテム表示間隔設定
             ListView_SetIconSpacing(listViewTanukiItem, imageListTanukiItem.ImageSize.Width, imageListTanukiItem.ImageSize.Height);
-            
+        }
+
+        /// <summary>
+        /// ゲスト追加
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public override void TanukiView_SetGuest(TanukiModel tanukiModel)
+        {
+            if (imageGuest != null)
+            {
+                ImageAnimator.StopAnimate(imageGuest, eventHandlerImageGuest);
+                imageGuest.Dispose();
+                eventHandlerImageGuest = null;
+            }
+
+            if (tanukiModel == null)
+            {
+                guestVisible = false;
+                modelGuest = null;
+                modelHost.GuestName = "";
+            }
+            else
+            {
+                guestVisible = true;
+                modelGuest = tanukiModel;
+                modelHost.GuestName = modelGuest.FullName;
+                imageGuest = modelGuest.InitImage();
+                eventHandlerImageGuest = new EventHandler(TanukiView_ImageFrameChangedGuest);
+            }
         }
 
         /// <summary>
@@ -50,13 +80,12 @@ namespace Tanuki_Chi
         private void TanukiView_Load(object sender, EventArgs e)
         {
             // 初期表示画像取得
-            Image image = model.InitImage();
+            Image image = modelHost.InitImage();
 
             // 境界取得
             tanukiRectangle = TanukiCommon.getImageBorder(image);
 
-            // 背景設定
-            //TanukiView_SetpictureBoxTanukiImage(image, Properties.Resources.HaruUrara_Dance_Smiling);
+            // たぬき設定
             TanukiView_SetpictureBoxTanukiImage(image);
         }
 
@@ -67,7 +96,7 @@ namespace Tanuki_Chi
         /// たぬきイメージ設定
         /// </summary>
         /// <param name="image"></param>
-        public void TanukiView_SetpictureBoxTanukiImage(Image image, Image guest = null)
+        public void TanukiView_SetpictureBoxTanukiImage(Image image)
         {
             if (pictureBoxTanuki != null && pictureBoxTanuki.Equals(image))
             {
@@ -87,55 +116,40 @@ namespace Tanuki_Chi
             }
             imageHost = image;
 
-            if (imageGuest != null)
-            {
-                ImageAnimator.StopAnimate(imageGuest, eventHandlerImageGuest);
-                imageGuest.Dispose();
-                eventHandlerImageGuest = null;
-            }
-            imageGuest = guest;
-
-            // 初期表示画像を貼り付ける。
-            //pictureBoxTanuki.Image = image;
-
             // アニメーション設定
-            eventHandlerImageHost = new EventHandler(base.TanukiView_ImageFrameChanged);
+            eventHandlerImageHost = new EventHandler(TanukiView_ImageFrameChangedHost);
             ImageAnimator.Animate(imageHost, eventHandlerImageHost);
             if(imageGuest != null)
             {
-                eventHandlerImageGuest = new EventHandler(base.TanukiView_ImageFrameChanged);
                 ImageAnimator.Animate(imageGuest, eventHandlerImageGuest);
             }
         }
 
-        //int frameCountHost = 0;
-        //int frameCountGuest = 0;
-
         /// <summary>
-        /// 再描画
+        /// フレーム更新
         /// </summary>
-        /// <param name="sender"></param>
+        /// <param name="o"></param>
         /// <param name="e"></param>
-        private void TanukiView_Paint(object sender, PaintEventArgs e)
+        private void TanukiView_ImageFrameChangedHost(object o, EventArgs e)
         {
             int intWidth = imageHost.Width;
-            int intHeight = imageHost.Height + imageHost.Height/5;
+            int intHeight = imageHost.Height + imageHost.Height / 5;
 
-            if (imageGuest != null)
+            if (imageGuest != null && guestVisible)
             {
-                intWidth += imageGuest.Width;
+                intWidth += imageGuest.Width / 2;
             }
 
             Bitmap bitmap = new Bitmap(intWidth, intHeight);
             Graphics graphics = Graphics.FromImage(bitmap);
-            if (imageGuest == null)
+            if (imageGuest != null && guestVisible)
             {
                 graphics.DrawImage(imageHost, 0, imageHost.Height / 5, imageHost.Width, imageHost.Height);
+                graphics.DrawImage(imageGuest, imageHost.Width / 2, imageGuest.Height / 5, imageGuest.Width, imageGuest.Height);
             }
             else
             {
                 graphics.DrawImage(imageHost, 0, imageHost.Height / 5, imageHost.Width, imageHost.Height);
-                graphics.DrawImage(imageGuest, imageHost.Width / 2, imageGuest.Height / 5, imageGuest.Width, imageGuest.Height);
             }
 
             if (pictureBoxTanuki.Image != null)
@@ -144,10 +158,32 @@ namespace Tanuki_Chi
             }
             pictureBoxTanuki.Image = bitmap;
 
-            base.TanukiView_Paint(sender, e, imageHost);
-            base.TanukiView_Paint(sender, e, imageGuest);
-
             graphics.Dispose();
+            base.TanukiView_ImageFrameChanged(o, e);
+        }
+
+        /// <summary>
+        /// フレーム更新
+        /// </summary>
+        /// <param name="o"></param>
+        /// <param name="e"></param>
+        private void TanukiView_ImageFrameChangedGuest(object o, EventArgs e)
+        {
+            base.TanukiView_ImageFrameChanged(o, e);
+        }
+
+        /// <summary>
+        /// 再描画
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TanukiView_Paint(object sender, PaintEventArgs e)
+        {
+            base.TanukiView_Paint(sender, e, imageHost);
+            if (imageGuest != null)
+            {
+                base.TanukiView_Paint(sender, e, imageGuest);
+            }
         }
 
         /// <summary>
@@ -169,9 +205,14 @@ namespace Tanuki_Chi
         {
             timerMouseDown.Stop();
 
+            if (imageGuest != null)
+            {
+                guestVisible = true;
+            }
+
             pictureBoxTanuki.Image.Dispose();
-            Image image = model.Command("");
-            TanukiView_SetpictureBoxTanukiImage(image, Properties.Resources.HaruUrara_Dance_Smiling);
+            Image image = modelHost.Command("");
+            TanukiView_SetpictureBoxTanukiImage(image);
         }
 
         /// <summary>
@@ -276,7 +317,13 @@ namespace Tanuki_Chi
             ListView listView = sender as ListView;
             ListViewItem srcItem = listView.SelectedItems[0];
             string imageKey = srcItem.ImageKey;
-            Image image = model.Command(imageKey);
+
+            if(imageKey == "futon")
+            {
+                guestVisible = false;
+            }
+
+            Image image = modelHost.Command(imageKey);
             TanukiView_SetpictureBoxTanukiImage(image);
             listViewTanukiItem.Visible = !listViewTanukiItem.Visible;
         }

@@ -58,6 +58,7 @@ namespace Tanuki_Chi
             //tanukiViews.Add(new TanukiViewBgImg(new TwinTurbo(), this));
             foreach (var view in tanukiViews)
             {
+                view.TanukiView_SetGuest(new HaruUrara());
                 view.Show(this);
             }
 

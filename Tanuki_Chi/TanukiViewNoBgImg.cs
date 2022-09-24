@@ -23,7 +23,17 @@ namespace Tanuki_Chi
         {
             InitializeComponent();
         }
-        
+
+        /// <summary>
+        /// ゲスト追加
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public override void TanukiView_SetGuest(TanukiModel tanukiModel)
+        {
+
+        }
+
         /// <summary>
         /// たぬき表示開始
         /// </summary>
@@ -32,7 +42,7 @@ namespace Tanuki_Chi
         private void TanukiView_Load(object sender, EventArgs e)
         {
             // 初期表示画像取得
-            Image image = model.InitImage();
+            Image image = modelHost.InitImage();
 
             // 境界取得
             tanukiRectangle = TanukiCommon.getImageBorder(image);
@@ -127,7 +137,7 @@ namespace Tanuki_Chi
             }
 
             BackgroundImage.Dispose();
-            Image image = model.Command("MouseDown");
+            Image image = modelHost.Command("MouseDown");
             setHeightPostion(image);
             TanukiView_SetBackgroundImage(image);
 
@@ -158,7 +168,7 @@ namespace Tanuki_Chi
             timerMouseDown.Stop();
 
             BackgroundImage.Dispose();
-            Image image = model.Command("");
+            Image image = modelHost.Command("");
             setHeightPostion(image);
             TanukiView_SetBackgroundImage(image);
         }
@@ -204,7 +214,7 @@ namespace Tanuki_Chi
                 int index = srcItem.ImageIndex;
 
                 BackgroundImage.Dispose();
-                Image image = model.Command("Put:" + index.ToString());
+                Image image = modelHost.Command("Put:" + index.ToString());
                 setHeightPostion(image);
                 TanukiView_SetBackgroundImage(image);
                 timerMouseDown.Start();

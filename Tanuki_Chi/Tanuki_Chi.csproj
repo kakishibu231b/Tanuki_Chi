@@ -71,6 +71,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TankiModel\HaruUrara.cs" />
     <Compile Include="TanukiItem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +162,7 @@
     <Content Include="Resources\Background\room_yuka_tatami.png" />
     <Content Include="Resources\HaruUrara\HaruUrara_Dance_Smiling.gif" />
     <Content Include="Resources\KingHalo\KingHalo_Sleep_Smiling.gif" />
+    <Content Include="Resources\KingHalo\KingHaloHaruUrara_Sleep_Smiling.gif" />
     <Content Include="Resources\OjuChosan\OjuChosan_Dance_Smiling.gif" />
     <Content Include="Resources\OjuChosan\OjuChosan_Front_WaistSwing.gif" />
     <Content Include="Resources\HayakawaTazuna\HayakawaTazuna_Smiling.gif" />

@@ -8,12 +8,13 @@ using System.Windows.Forms;
 
 namespace Tanuki_Chi
 {
-    public class TanukiView : Form
+    public abstract class TanukiView : Form
     {
         /// <summary>
         /// 
         /// </summary>
-        public TanukiModel model;
+        public TanukiModel modelHost;
+        public TanukiModel modelGuest;
 
         /// <summary>
         /// 
@@ -35,7 +36,7 @@ namespace Tanuki_Chi
         /// <param name="owner"></param>
         public TanukiView(TanukiModel model, Form owner)
         {
-            this.model = model;
+            this.modelHost = model;
             this.Owner = owner;
         }
 
@@ -58,5 +59,12 @@ namespace Tanuki_Chi
         {
             ImageAnimator.UpdateFrames(image);
         }
+
+        /// <summary>
+        /// ゲスト追加
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public abstract void TanukiView_SetGuest(TanukiModel tanukiModel);
     }
 }

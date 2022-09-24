@@ -35,10 +35,21 @@ namespace Tanuki_Chi
 
             if (command == "futon")
             {
-                if (CurrentImageName != "KingHalo_Sleep_Smiling")
+                if (GuestName == "ハルウララ")
                 {
-                    CurrentImageName = "KingHalo_Sleep_Smiling";
-                    image = Properties.Resources.KingHalo_Sleep_Smiling;
+                    if (CurrentImageName != "KingHaloHaruUrara_Sleep_Smiling")
+                    {
+                        CurrentImageName = "KingHaloHaruUrara_Sleep_Smiling";
+                        image = Properties.Resources.KingHaloHaruUrara_Sleep_Smiling;
+                    }
+                }
+                else
+                {
+                    if (CurrentImageName != "KingHalo_Sleep_Smiling")
+                    {
+                        CurrentImageName = "KingHalo_Sleep_Smiling";
+                        image = Properties.Resources.KingHalo_Sleep_Smiling;
+                    }
                 }
             }
 
