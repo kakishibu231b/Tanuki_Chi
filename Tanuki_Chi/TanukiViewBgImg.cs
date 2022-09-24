@@ -56,8 +56,12 @@ namespace Tanuki_Chi
             tanukiRectangle = TanukiCommon.getImageBorder(image);
 
             // 背景設定
-            TanukiView_SetpictureBoxTanukiImage(image, Properties.Resources.HaruUrara_Dance_Smiling);
+            //TanukiView_SetpictureBoxTanukiImage(image, Properties.Resources.HaruUrara_Dance_Smiling);
+            TanukiView_SetpictureBoxTanukiImage(image);
         }
+
+        EventHandler eventHandlerImageHost;
+        EventHandler eventHandlerImageGuest;
 
         /// <summary>
         /// たぬきイメージ設定
@@ -77,13 +81,17 @@ namespace Tanuki_Chi
 
             if(imageHost != null)
             {
+                ImageAnimator.StopAnimate(imageHost, eventHandlerImageHost);
                 imageHost.Dispose();
+                eventHandlerImageHost = null;
             }
             imageHost = image;
 
             if (imageGuest != null)
             {
+                ImageAnimator.StopAnimate(imageGuest, eventHandlerImageGuest);
                 imageGuest.Dispose();
+                eventHandlerImageGuest = null;
             }
             imageGuest = guest;
 
@@ -91,8 +99,13 @@ namespace Tanuki_Chi
             //pictureBoxTanuki.Image = image;
 
             // アニメーション設定
-            ImageAnimator.Animate(imageHost, new EventHandler(base.TanukiView_ImageFrameChanged));
-            ImageAnimator.Animate(imageGuest, new EventHandler(base.TanukiView_ImageFrameChanged));
+            eventHandlerImageHost = new EventHandler(base.TanukiView_ImageFrameChanged);
+            ImageAnimator.Animate(imageHost, eventHandlerImageHost);
+            if(imageGuest != null)
+            {
+                eventHandlerImageGuest = new EventHandler(base.TanukiView_ImageFrameChanged);
+                ImageAnimator.Animate(imageGuest, eventHandlerImageGuest);
+            }
         }
 
         //int frameCountHost = 0;
@@ -111,27 +124,10 @@ namespace Tanuki_Chi
             if (imageGuest != null)
             {
                 intWidth += imageGuest.Width;
-                intHeight += imageGuest.Height;
             }
 
             Bitmap bitmap = new Bitmap(intWidth, intHeight);
             Graphics graphics = Graphics.FromImage(bitmap);
-
-            //FrameDimension frameDimensionHost = new FrameDimension(imageHost.FrameDimensionsList[0]);
-            //FrameDimension frameDimensionGuest = new FrameDimension(imageGuest.FrameDimensionsList[0]);
-
-            //imageHost.SelectActiveFrame(frameDimensionHost, frameCountHost++);
-            //imageGuest.SelectActiveFrame(frameDimensionGuest, frameCountGuest++);
-
-            //if(frameCountHost >= imageHost.GetFrameCount(frameDimensionHost))
-            //{
-            //    frameCountHost = 0;
-            //}
-            //if (frameCountGuest >= imageHost.GetFrameCount(frameDimensionGuest))
-            //{
-            //    frameCountGuest = 0;
-            //}
-
             if (imageGuest == null)
             {
                 graphics.DrawImage(imageHost, 0, imageHost.Height / 5, imageHost.Width, imageHost.Height);
