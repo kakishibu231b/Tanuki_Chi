@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "ごはん"}, "Rice", System.Drawing.Color.White, System.Drawing.SystemColors.Window, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "ふとん"}, "futon", System.Drawing.Color.White, System.Drawing.Color.Empty, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TanukiViewBgImg));
             this.timerMouseDown = new System.Windows.Forms.Timer(this.components);
@@ -43,7 +43,7 @@
             // 
             // timerMouseDown
             // 
-            this.timerMouseDown.Interval = 10;
+            this.timerMouseDown.Interval = 5000;
             this.timerMouseDown.Tick += new System.EventHandler(this.timerMouseDown_Tick);
             // 
             // listViewTanukiItem
@@ -55,11 +55,11 @@
             this.listViewTanukiItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listViewTanukiItem.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.listViewTanukiItem.HideSelection = false;
-            listViewItem3.StateImageIndex = 0;
-            listViewItem4.StateImageIndex = 0;
+            listViewItem1.StateImageIndex = 0;
+            listViewItem2.StateImageIndex = 0;
             this.listViewTanukiItem.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3,
-            listViewItem4});
+            listViewItem1,
+            listViewItem2});
             this.listViewTanukiItem.LabelWrap = false;
             this.listViewTanukiItem.LargeImageList = this.imageListTanukiItem;
             this.listViewTanukiItem.Location = new System.Drawing.Point(0, 315);
