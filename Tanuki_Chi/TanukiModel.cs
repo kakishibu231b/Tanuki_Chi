@@ -8,6 +8,8 @@ namespace Tanuki_Chi
         private string eponymousName;
         private string currentImageName;
         private string guestName;
+        private int stomachMax;
+        private int stomachNow;
 
         /// <summary>
         /// 
@@ -22,10 +24,12 @@ namespace Tanuki_Chi
         /// </summary>
         /// <param name="fulllname"></param>
         /// <param name="eponymousName"></param>
-        public TanukiModel(string fulllname, string eponymousName)
+        public TanukiModel(string fulllname, string eponymousName, int stomachMax = 100, int stomachNow = 50)
         {
             this.fullName = fulllname;
             this.eponymousName = eponymousName;
+            this.stomachMax = stomachMax;
+            this.stomachNow = stomachNow;
         }
 
         /// <summary>

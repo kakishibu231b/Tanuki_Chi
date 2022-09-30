@@ -39,8 +39,10 @@ namespace Tanuki_Chi
             g.DrawImageUnscaled(Properties.Resources.room_yuka_flooring, 0 - rectangle.Left, 0 - rectangle.Top, rectangle.Width, rectangle.Height);
             pictureBoxTanuki.BackgroundImage = bitmap;
 
+            listViewTanukiItem.Width = bitmap.Width;
+
             // アイテム表示間隔設定
-            ListView_SetIconSpacing(listViewTanukiItem, imageListTanukiItem.ImageSize.Width, imageListTanukiItem.ImageSize.Height);
+            ListView_SetIconSpacing(listViewTanukiItem, imageListTanukiItem.ImageSize.Width+5, imageListTanukiItem.ImageSize.Height);
         }
 
         /// <summary>

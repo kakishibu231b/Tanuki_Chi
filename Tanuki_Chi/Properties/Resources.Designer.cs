@@ -203,16 +203,6 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap meat {
-            get {
-                object obj = ResourceManager.GetObject("meat", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
         internal static System.Drawing.Bitmap MihonoBourbon_Dance_Sing {
             get {
                 object obj = ResourceManager.GetObject("MihonoBourbon_Dance_Sing", resourceCulture);

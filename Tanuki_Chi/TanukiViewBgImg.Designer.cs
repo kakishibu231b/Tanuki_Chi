@@ -29,16 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "おにく"}, "Meat", System.Drawing.Color.White, System.Drawing.Color.Empty, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
-            "ごはん"}, "Rice", System.Drawing.Color.White, System.Drawing.SystemColors.Window, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
-            "ふとん"}, "Futon", System.Drawing.Color.White, System.Drawing.Color.Empty, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TanukiViewBgImg));
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            "食事"}, "rice", System.Drawing.Color.White, System.Drawing.SystemColors.Window, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            "消灯"}, "futon", System.Drawing.Color.White, System.Drawing.Color.Empty, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            "あそび"}, "ahiru", System.Drawing.Color.White, System.Drawing.Color.Empty, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            "体調管理"}, "hari", System.Drawing.Color.White, System.Drawing.Color.Empty, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
+            "トレーニング"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
+            "試合"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
+            "ステータス"}, "taijukei", System.Drawing.Color.White, System.Drawing.Color.Empty, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
             this.timerMouseDown = new System.Windows.Forms.Timer(this.components);
-            this.listViewTanukiItem = new System.Windows.Forms.ListView();
             this.imageListTanukiItem = new System.Windows.Forms.ImageList(this.components);
+            this.listViewTanukiItem = new System.Windows.Forms.ListView();
             this.pictureBoxTanuki = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTanuki)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +55,19 @@
             // 
             this.timerMouseDown.Interval = 5000;
             this.timerMouseDown.Tick += new System.EventHandler(this.timerMouseDown_Tick);
+            // 
+            // imageListTanukiItem
+            // 
+            this.imageListTanukiItem.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListTanukiItem.ImageStream")));
+            this.imageListTanukiItem.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListTanukiItem.Images.SetKeyName(0, "ahiru");
+            this.imageListTanukiItem.Images.SetKeyName(1, "futon");
+            this.imageListTanukiItem.Images.SetKeyName(2, "hachimi");
+            this.imageListTanukiItem.Images.SetKeyName(3, "hari");
+            this.imageListTanukiItem.Images.SetKeyName(4, "meat");
+            this.imageListTanukiItem.Images.SetKeyName(5, "rice");
+            this.imageListTanukiItem.Images.SetKeyName(6, "soft_serve");
+            this.imageListTanukiItem.Images.SetKeyName(7, "taijukei");
             // 
             // listViewTanukiItem
             // 
@@ -57,35 +78,32 @@
             this.listViewTanukiItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listViewTanukiItem.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.listViewTanukiItem.HideSelection = false;
+            this.listViewTanukiItem.HoverSelection = true;
+            listViewItem1.StateImageIndex = 0;
             listViewItem2.StateImageIndex = 0;
-            listViewItem3.StateImageIndex = 0;
             this.listViewTanukiItem.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1,
             listViewItem2,
-            listViewItem3});
+            listViewItem3,
+            listViewItem4,
+            listViewItem5,
+            listViewItem6,
+            listViewItem7});
             this.listViewTanukiItem.LabelWrap = false;
             this.listViewTanukiItem.LargeImageList = this.imageListTanukiItem;
-            this.listViewTanukiItem.Location = new System.Drawing.Point(0, 315);
+            this.listViewTanukiItem.Location = new System.Drawing.Point(0, 340);
             this.listViewTanukiItem.MultiSelect = false;
             this.listViewTanukiItem.Name = "listViewTanukiItem";
-            this.listViewTanukiItem.Size = new System.Drawing.Size(500, 185);
+            this.listViewTanukiItem.Scrollable = false;
+            this.listViewTanukiItem.Size = new System.Drawing.Size(500, 160);
             this.listViewTanukiItem.SmallImageList = this.imageListTanukiItem;
-            this.listViewTanukiItem.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listViewTanukiItem.TabIndex = 1;
-            this.listViewTanukiItem.TileSize = new System.Drawing.Size(100, 100);
+            this.listViewTanukiItem.TileSize = new System.Drawing.Size(80, 80);
             this.listViewTanukiItem.UseCompatibleStateImageBehavior = false;
             this.listViewTanukiItem.Visible = false;
             this.listViewTanukiItem.DoubleClick += new System.EventHandler(this.listViewTanukiItem_DoubleClick);
             this.listViewTanukiItem.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewTanukiItem_MouseDoubleClick);
             this.listViewTanukiItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listViewTanukiItem_MouseDown);
-            // 
-            // imageListTanukiItem
-            // 
-            this.imageListTanukiItem.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListTanukiItem.ImageStream")));
-            this.imageListTanukiItem.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListTanukiItem.Images.SetKeyName(0, "Rice");
-            this.imageListTanukiItem.Images.SetKeyName(1, "Futon");
-            this.imageListTanukiItem.Images.SetKeyName(2, "Meat");
             // 
             // pictureBoxTanuki
             // 
