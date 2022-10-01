@@ -28,15 +28,16 @@ namespace Tanuki_Chi
             InitializeComponent();
 
             // 境界取得
-            //Rectangle rectangle = TanukiCommon.getImageBorder(Properties.Resources.room_yuka_tatami);
-            Rectangle rectangle = TanukiCommon.getImageBorder(Properties.Resources.room_yuka_flooring);
+            Rectangle rectangle = TanukiCommon.getImageBorder(Properties.Resources.room_yuka_tatami);
+            //Rectangle rectangle = TanukiCommon.getImageBorder(Properties.Resources.room_yuka_flooring);
             int intMargin = 10;
             rectangle = new Rectangle(rectangle.X + intMargin, rectangle.Y + intMargin, rectangle.Width - (intMargin * 2), rectangle.Height - (intMargin * 2));
             Bounds = rectangle;
 
             Bitmap bitmap = new Bitmap(Width, Height);
             Graphics g = Graphics.FromImage(bitmap);
-            g.DrawImageUnscaled(Properties.Resources.room_yuka_flooring, 0 - rectangle.Left, 0 - rectangle.Top, rectangle.Width, rectangle.Height);
+            g.DrawImageUnscaled(Properties.Resources.room_yuka_tatami, 0 - rectangle.Left, 0 - rectangle.Top, rectangle.Width, rectangle.Height);
+            //g.DrawImageUnscaled(Properties.Resources.room_yuka_flooring, 0 - rectangle.Left, 0 - rectangle.Top, rectangle.Width, rectangle.Height);
             pictureBoxTanuki.BackgroundImage = bitmap;
 
             listViewTanukiItem.Width = bitmap.Width;

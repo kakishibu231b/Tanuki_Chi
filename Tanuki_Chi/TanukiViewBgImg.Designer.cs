@@ -41,9 +41,15 @@
             System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "トレーニング"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
             System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
-            "試合"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
+            "しつけ"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
             System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
+            "試合"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
             "ステータス"}, "taijukei", System.Drawing.Color.White, System.Drawing.Color.Empty, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
+            "部屋"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
+            "終了"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128))));
             this.timerMouseDown = new System.Windows.Forms.Timer(this.components);
             this.imageListTanukiItem = new System.Windows.Forms.ImageList(this.components);
             this.listViewTanukiItem = new System.Windows.Forms.ListView();
@@ -88,7 +94,10 @@
             listViewItem4,
             listViewItem5,
             listViewItem6,
-            listViewItem7});
+            listViewItem7,
+            listViewItem8,
+            listViewItem9,
+            listViewItem10});
             this.listViewTanukiItem.LabelWrap = false;
             this.listViewTanukiItem.LargeImageList = this.imageListTanukiItem;
             this.listViewTanukiItem.Location = new System.Drawing.Point(0, 340);
