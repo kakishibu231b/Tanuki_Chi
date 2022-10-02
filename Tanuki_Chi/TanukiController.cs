@@ -41,7 +41,7 @@ namespace Tanuki_Chi
             //tanukiViews.Add(new TanukiViewBgImg(new GrassWonder(), this));
             //tanukiViews.Add(new TanukiViewBgImg(new KingHalo(), this));
             //tanukiViews.Add(new TanukiViewBgImg(new SeiunSky(), this));
-            tanukiViews.Add(new TanukiViewBgImg(new SpecialWeek(), this));
+            //tanukiViews.Add(new TanukiViewBgImg(new SpecialWeek(), this));
             //tanukiViews.Add(new TanukiViewBgImg(new TsurumaruTsuyoshi(), this));
 
             //tanukiViews.Add(new TanukiViewBgImg(new InesFujin(), this));
@@ -50,7 +50,7 @@ namespace Tanuki_Chi
             //tanukiViews.Add(new TanukiViewBgImg(new SmartFalcon(), this));
             //tanukiViews.Add(new TanukiViewBgImg(new Maruzensky(), this));
 
-            //tanukiViews.Add(new TanukiViewBgImg(new SymboliRudolf(), this));
+            tanukiViews.Add(new TanukiViewBgImg(new SymboliRudolf(), this));
             //tanukiViews.Add(new TanukiViewBgImg(new SiriusSymboli(), this));
             //tanukiViews.Add(new TanukiViewBgImg(new GoldShip(), this));
             //tanukiViews.Add(new TanukiViewBgImg(new Hatsuratsu(), this));

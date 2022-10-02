@@ -62,12 +62,14 @@ namespace Tanuki_Chi
                 listViewCommand.Items.Add("消灯", "futon");
                 listViewCommand.Items.Add("あそび", "ahiru");
                 listViewCommand.Items.Add("ステータス", "taijukei");
+                listViewCommand.Items.Add("おわる");
             }
 
             if (mode == "食事")
             {
                 listViewCommand.Items.Add("ごはん", "rice");
                 listViewCommand.Items.Add("おにく", "meat");
+                listViewCommand.Items.Add("ラーメン", "ramen");
                 listViewCommand.Items.Add("もどる");
             }
 
@@ -340,6 +342,11 @@ namespace Tanuki_Chi
         {
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void listViewTanukiItem_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (timerMouseDown.Enabled)
@@ -353,7 +360,15 @@ namespace Tanuki_Chi
             ListViewItem srcItem = listView.SelectedItems[0];
 
             string name = srcItem.Text;
-            if (name == "食事")
+            if (name == "おわる")
+            {
+                Close();
+            }
+            else if (name == "もどる")
+            {
+                ListView_SetItems(name);
+            }
+            else if (name == "食事")
             {
                 ListView_SetItems(name);
             }

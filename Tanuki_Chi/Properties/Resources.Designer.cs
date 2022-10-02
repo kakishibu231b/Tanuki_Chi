@@ -333,6 +333,36 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap SymboliRudolf_Front_SmilingMeat {
+            get {
+                object obj = ResourceManager.GetObject("SymboliRudolf_Front_SmilingMeat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap SymboliRudolf_Front_SmilingRamen {
+            get {
+                object obj = ResourceManager.GetObject("SymboliRudolf_Front_SmilingRamen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap SymboliRudolf_Sleep_Smiling {
+            get {
+                object obj = ResourceManager.GetObject("SymboliRudolf_Sleep_Smiling", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap TokaiTeio_Front_Smiling {
             get {
                 object obj = ResourceManager.GetObject("TokaiTeio_Front_Smiling", resourceCulture);

@@ -183,6 +183,9 @@
     <Content Include="Resources\SpecialWeek\SpecialWeek_Dance_Smiling.gif" />
     <Content Include="Resources\SmartFalcon\SmartFalcon_Dance_Sing.gif" />
     <Content Include="Resources\SeiunSky\SeiunSky_Dance_Smiling.gif" />
+    <Content Include="Resources\SymboliRudolf\SymboliRudolf_Front_SmilingRamen.gif" />
+    <Content Include="Resources\SymboliRudolf\SymboliRudolf_Front_SmilingMeat.gif" />
+    <Content Include="Resources\SymboliRudolf\SymboliRudolf_Sleep_Smiling.gif" />
     <Content Include="Resources\TanukiItem\futon.png" />
     <Content Include="Resources\TanukiItem\rice.png" />
     <Content Include="Resources\TanukiItem\meat.png" />
@@ -191,6 +194,7 @@
     <Content Include="Resources\TanukiItem\taijukei.png" />
     <Content Include="Resources\TanukiItem\soft_serve.png" />
     <Content Include="Resources\TanukiItem\hachimi.png" />
+    <Content Include="Resources\TanukiItem\ramen.png" />
     <Content Include="Resources\TwinTurbo\TwinTurbo_Dance_HighSpirits.gif" />
     <Content Include="Resources\TsurumaruTsuyoshi\TsurumaruTsuyoshi_Dance_Smiling.gif" />
     <Content Include="Resources\TokaiTeio\TokaiTeio_Front_Smiling.gif" />
