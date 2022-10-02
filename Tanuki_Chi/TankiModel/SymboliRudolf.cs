@@ -34,19 +34,37 @@ namespace Tanuki_Chi
 
             }
 
-            if (command == "meat")
+            else if (command == "rice")
+            {
+                CurrentImageName = "SymboliRudolf_Dance_EatOnigiri";
+                image = Properties.Resources.SymboliRudolf_Dance_EatOnigiri;
+            }
+
+            else if (command == "meat")
             {
                 CurrentImageName = "SymboliRudolf_Front_SmilingMeat";
                 image = Properties.Resources.SymboliRudolf_Front_SmilingMeat;
             }
 
-            if (command == "ramen")
+            else if (command == "ramen")
             {
                 CurrentImageName = "SymboliRudolf_Front_SmilingRamen";
                 image = Properties.Resources.SymboliRudolf_Front_SmilingRamen;
             }
 
-            if (command == "futon")
+            else if (command == "deathsource")
+            {
+                CurrentImageName = "SymboliRudolf_HoppePuni_BreatheFire";
+                image = Properties.Resources.SymboliRudolf_HoppePuni_BreatheFire;
+            }
+
+            else if (command == "greentea")
+            {
+                CurrentImageName = "SymboliRudolf_Seiza_SmilingGreenTea";
+                image = Properties.Resources.SymboliRudolf_Seiza_SmilingGreenTea;
+            }
+
+            else if (command == "futon")
             {
                 CurrentImageName = "SymboliRudolf_Sleep_Smiling";
                 image = Properties.Resources.SymboliRudolf_Sleep_Smiling;

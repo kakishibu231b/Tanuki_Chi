@@ -323,6 +323,16 @@ namespace Tanuki_Chi.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap SymboliRudolf_Dance_EatOnigiri {
+            get {
+                object obj = ResourceManager.GetObject("SymboliRudolf_Dance_EatOnigiri", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap SymboliRudolf_Front_Smiling {
             get {
                 object obj = ResourceManager.GetObject("SymboliRudolf_Front_Smiling", resourceCulture);
@@ -346,6 +356,26 @@ namespace Tanuki_Chi.Properties {
         internal static System.Drawing.Bitmap SymboliRudolf_Front_SmilingRamen {
             get {
                 object obj = ResourceManager.GetObject("SymboliRudolf_Front_SmilingRamen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap SymboliRudolf_HoppePuni_BreatheFire {
+            get {
+                object obj = ResourceManager.GetObject("SymboliRudolf_HoppePuni_BreatheFire", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap SymboliRudolf_Seiza_SmilingGreenTea {
+            get {
+                object obj = ResourceManager.GetObject("SymboliRudolf_Seiza_SmilingGreenTea", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

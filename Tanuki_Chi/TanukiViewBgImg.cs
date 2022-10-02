@@ -70,6 +70,8 @@ namespace Tanuki_Chi
                 listViewCommand.Items.Add("ごはん", "rice");
                 listViewCommand.Items.Add("おにく", "meat");
                 listViewCommand.Items.Add("ラーメン", "ramen");
+                listViewCommand.Items.Add("お茶", "greentea");
+                listViewCommand.Items.Add("デスソース", "deathsource");
                 listViewCommand.Items.Add("もどる");
             }
 

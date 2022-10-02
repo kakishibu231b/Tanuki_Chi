@@ -55,6 +55,8 @@
             this.imageListTanukiItem.Images.SetKeyName(6, "soft_serve");
             this.imageListTanukiItem.Images.SetKeyName(7, "taijukei");
             this.imageListTanukiItem.Images.SetKeyName(8, "ramen");
+            this.imageListTanukiItem.Images.SetKeyName(9, "deathsource");
+            this.imageListTanukiItem.Images.SetKeyName(10, "greentea");
             // 
             // listViewCommand
             // 
