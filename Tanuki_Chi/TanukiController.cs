@@ -41,7 +41,7 @@ namespace Tanuki_Chi
             //tanukiViews.Add(new TanukiViewBgImg(new GrassWonder(), this));
             //tanukiViews.Add(new TanukiViewBgImg(new KingHalo(), this));
             //tanukiViews.Add(new TanukiViewBgImg(new SeiunSky(), this));
-            //tanukiViews.Add(new TanukiViewBgImg(new SpecialWeek(), this));
+            tanukiViews.Add(new TanukiViewBgImg(new SpecialWeek(), this));
             //tanukiViews.Add(new TanukiViewBgImg(new TsurumaruTsuyoshi(), this));
 
             //tanukiViews.Add(new TanukiViewBgImg(new InesFujin(), this));
@@ -57,7 +57,7 @@ namespace Tanuki_Chi
             //tanukiViews.Add(new TanukiViewBgImg(new TokaiTeio(), this));
             //tanukiViews.Add(new TanukiViewBgImg(new TwinTurbo(), this));
 
-            tanukiViews.Add(new TanukiViewBgImg(new DaiwaScarlet(), this));
+            //tanukiViews.Add(new TanukiViewBgImg(new DaiwaScarlet(), this));
             foreach (var view in tanukiViews)
             {
                 //view.TanukiView_SetGuest(new HaruUrara());

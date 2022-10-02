@@ -40,10 +40,43 @@ namespace Tanuki_Chi
             //g.DrawImageUnscaled(Properties.Resources.room_yuka_flooring, 0 - rectangle.Left, 0 - rectangle.Top, rectangle.Width, rectangle.Height);
             pictureBoxTanuki.BackgroundImage = bitmap;
 
-            listViewTanukiItem.Width = bitmap.Width;
+            listViewCommand.Width = bitmap.Width;
+
+
+            ListView_SetItems();
 
             // アイテム表示間隔設定
-            ListView_SetIconSpacing(listViewTanukiItem, imageListTanukiItem.ImageSize.Width+5, imageListTanukiItem.ImageSize.Height);
+            ListView_SetIconSpacing(listViewCommand, imageListTanukiItem.ImageSize.Width+5, imageListTanukiItem.ImageSize.Height);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void ListView_SetItems(string mode = "")
+        {
+            listViewCommand.Items.Clear();
+
+            if(mode == "" || mode == "もどる")
+            {
+                listViewCommand.Items.Add("食事", "rice");
+                listViewCommand.Items.Add("消灯", "futon");
+                listViewCommand.Items.Add("あそび", "ahiru");
+                listViewCommand.Items.Add("ステータス", "taijukei");
+            }
+
+            if (mode == "食事")
+            {
+                listViewCommand.Items.Add("ごはん", "rice");
+                listViewCommand.Items.Add("おにく", "meat");
+                listViewCommand.Items.Add("もどる");
+            }
+
+            foreach (ListViewItem item in listViewCommand.Items)
+            {
+                item.Font = new Font("MS UI Gothic", 16, FontStyle.Bold);
+                item.ForeColor = Color.White;
+            }
+
         }
 
         /// <summary>
@@ -267,7 +300,7 @@ namespace Tanuki_Chi
             }
             if ((e.Button & MouseButtons.Right) == MouseButtons.Right)
             {
-                listViewTanukiItem.Visible = !listViewTanukiItem.Visible;
+                listViewCommand.Visible = !listViewCommand.Visible;
             }
         }
 
@@ -280,7 +313,7 @@ namespace Tanuki_Chi
         {
             if ((e.Button & MouseButtons.Right) == MouseButtons.Right)
             {
-                listViewTanukiItem.Visible = !listViewTanukiItem.Visible;
+                listViewCommand.Visible = !listViewCommand.Visible;
             }
         }
 
@@ -316,20 +349,30 @@ namespace Tanuki_Chi
                 return;
             }
 
-            timerMouseDown.Start();
-
             ListView listView = sender as ListView;
             ListViewItem srcItem = listView.SelectedItems[0];
-            string imageKey = srcItem.ImageKey;
 
-            if(imageKey == "Futon")
+            string name = srcItem.Text;
+            if (name == "食事")
             {
-                guestVisible = false;
+                ListView_SetItems(name);
             }
+            else
+            {
+                timerMouseDown.Start();
 
-            Image image = modelHost.Command(imageKey);
-            TanukiView_SetpictureBoxTanukiImage(image);
-            listViewTanukiItem.Visible = !listViewTanukiItem.Visible;
+                string imageKey = srcItem.ImageKey;
+
+                if (imageKey == "Futon")
+                {
+                    guestVisible = false;
+                }
+
+                Image image = modelHost.Command(imageKey);
+                TanukiView_SetpictureBoxTanukiImage(image);
+                ListView_SetItems();
+                listViewCommand.Visible = !listViewCommand.Visible;
+            }
         }
 
         /// <summary>
